@@ -15,17 +15,49 @@ namespace TungMovie
     public partial class AdminManagement : Form
     {
 
-
-		private void button4_Click(object sender, EventArgs e)
-		{
-            new ManagerCustomerAccount().Show();
-            this.Hide();
+        public AdminManagement()
+        {
+            InitializeComponent();
         }
 
-		private void button1_Click(object sender, EventArgs e)
-		{
+        private void customer_btn_Click(object sender, EventArgs e)
+        {
+            new FormMenuCustomer().Show();
+        }
+
+        private void manager_btn_Click(object sender, EventArgs e)
+        {
             new EmployeeManagermentAccount().Show();
-            this.Hide();
         }
-	}
+
+        private void room_btn_Click(object sender, EventArgs e)
+        {
+            new RoomManagement().Show();
+        }
+
+        private void movie_btn_Click(object sender, EventArgs e)
+        {
+            new Film_management().Show();
+        }
+
+        private void ticket_btn_Click(object sender, EventArgs e)
+        {
+            new TicketManagement().Show();
+        }
+
+        private void schedule_btn_Click(object sender, EventArgs e)
+        {
+            new ScheduleManagement().Show();
+        }
+
+        private void statistics_btn_Click(object sender, EventArgs e)
+        {
+            new StatiticsForm().Show();
+        }
+
+        private void AdminManagement_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
