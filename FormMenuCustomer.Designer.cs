@@ -33,12 +33,10 @@ namespace TungMovie
 			this.button10 = new System.Windows.Forms.Button();
 			this.button9 = new System.Windows.Forms.Button();
 			this.button8 = new System.Windows.Forms.Button();
-			this.button6 = new System.Windows.Forms.Button();
 			this.button5 = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
 			this.label10 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
-			this.label8 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
@@ -61,6 +59,7 @@ namespace TungMovie
 			this.button10.Size = new System.Drawing.Size(78, 50);
 			this.button10.TabIndex = 70;
 			this.button10.UseVisualStyleBackColor = false;
+			this.button10.Click += new System.EventHandler(this.button10_Click);
 			// 
 			// button9
 			// 
@@ -74,6 +73,7 @@ namespace TungMovie
 			this.button9.Size = new System.Drawing.Size(78, 50);
 			this.button9.TabIndex = 69;
 			this.button9.UseVisualStyleBackColor = false;
+			this.button9.Click += new System.EventHandler(this.button9_Click);
 			// 
 			// button8
 			// 
@@ -87,19 +87,7 @@ namespace TungMovie
 			this.button8.Size = new System.Drawing.Size(78, 50);
 			this.button8.TabIndex = 68;
 			this.button8.UseVisualStyleBackColor = false;
-			// 
-			// button6
-			// 
-			this.button6.BackColor = System.Drawing.Color.White;
-			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button6.ForeColor = System.Drawing.Color.White;
-			this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-			this.button6.Location = new System.Drawing.Point(405, 227);
-			this.button6.Margin = new System.Windows.Forms.Padding(2);
-			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(78, 50);
-			this.button6.TabIndex = 66;
-			this.button6.UseVisualStyleBackColor = false;
+			this.button8.Click += new System.EventHandler(this.button8_Click);
 			// 
 			// button5
 			// 
@@ -114,6 +102,7 @@ namespace TungMovie
 			this.button5.TabIndex = 65;
 			this.button5.Text = "button5";
 			this.button5.UseVisualStyleBackColor = false;
+			this.button5.Click += new System.EventHandler(this.button5_Click);
 			// 
 			// button4
 			// 
@@ -127,39 +116,29 @@ namespace TungMovie
 			this.button4.Size = new System.Drawing.Size(78, 50);
 			this.button4.TabIndex = 64;
 			this.button4.UseVisualStyleBackColor = false;
+			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
 			// label10
 			// 
 			this.label10.AutoSize = true;
 			this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label10.Location = new System.Drawing.Point(316, 100);
+			this.label10.Location = new System.Drawing.Point(267, 96);
 			this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(51, 20);
+			this.label10.Size = new System.Drawing.Size(134, 20);
 			this.label10.TabIndex = 62;
-			this.label10.Text = "Ticket";
+			this.label10.Text = "purchased tickets";
 			// 
 			// label9
 			// 
 			this.label9.AutoSize = true;
 			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.Location = new System.Drawing.Point(316, 173);
+			this.label9.Location = new System.Drawing.Point(281, 173);
 			this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(50, 20);
+			this.label9.Size = new System.Drawing.Size(96, 20);
 			this.label9.TabIndex = 61;
-			this.label9.Text = "Movie";
-			// 
-			// label8
-			// 
-			this.label8.AutoSize = true;
-			this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label8.Location = new System.Drawing.Point(316, 243);
-			this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(43, 20);
-			this.label8.TabIndex = 60;
-			this.label8.Text = "Seat";
+			this.label9.Text = "Ticket Movie";
 			// 
 			// label7
 			// 
@@ -228,6 +207,7 @@ namespace TungMovie
 			this.button2.Size = new System.Drawing.Size(78, 50);
 			this.button2.TabIndex = 52;
 			this.button2.UseVisualStyleBackColor = false;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// button1
 			// 
@@ -264,12 +244,10 @@ namespace TungMovie
 			this.Controls.Add(this.button10);
 			this.Controls.Add(this.button9);
 			this.Controls.Add(this.button8);
-			this.Controls.Add(this.button6);
 			this.Controls.Add(this.button5);
 			this.Controls.Add(this.button4);
 			this.Controls.Add(this.label10);
 			this.Controls.Add(this.label9);
-			this.Controls.Add(this.label8);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label4);
@@ -289,12 +267,10 @@ namespace TungMovie
 		private System.Windows.Forms.Button button10;
 		private System.Windows.Forms.Button button9;
 		private System.Windows.Forms.Button button8;
-		private System.Windows.Forms.Button button6;
 		private System.Windows.Forms.Button button5;
 		private System.Windows.Forms.Button button4;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Label label9;
-		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label4;

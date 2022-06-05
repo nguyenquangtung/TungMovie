@@ -186,6 +186,7 @@ namespace TungMovie
 			this.button10.Size = new System.Drawing.Size(78, 50);
 			this.button10.TabIndex = 71;
 			this.button10.UseVisualStyleBackColor = false;
+			this.button10.Click += new System.EventHandler(this.button10_Click);
 			// 
 			// button9
 			// 
@@ -199,6 +200,7 @@ namespace TungMovie
 			this.button9.Size = new System.Drawing.Size(78, 50);
 			this.button9.TabIndex = 70;
 			this.button9.UseVisualStyleBackColor = false;
+			this.button9.Click += new System.EventHandler(this.button9_Click);
 			// 
 			// button8
 			// 
@@ -212,6 +214,7 @@ namespace TungMovie
 			this.button8.Size = new System.Drawing.Size(78, 50);
 			this.button8.TabIndex = 69;
 			this.button8.UseVisualStyleBackColor = false;
+			this.button8.Click += new System.EventHandler(this.button8_Click);
 			// 
 			// button7
 			// 
@@ -225,6 +228,7 @@ namespace TungMovie
 			this.button7.Size = new System.Drawing.Size(78, 50);
 			this.button7.TabIndex = 68;
 			this.button7.UseVisualStyleBackColor = false;
+			this.button7.Click += new System.EventHandler(this.button7_Click);
 			// 
 			// button6
 			// 
@@ -238,6 +242,7 @@ namespace TungMovie
 			this.button6.Size = new System.Drawing.Size(78, 50);
 			this.button6.TabIndex = 67;
 			this.button6.UseVisualStyleBackColor = false;
+			this.button6.Click += new System.EventHandler(this.button6_Click);
 			// 
 			// button5
 			// 
@@ -252,6 +257,7 @@ namespace TungMovie
 			this.button5.TabIndex = 66;
 			this.button5.Text = "button5";
 			this.button5.UseVisualStyleBackColor = false;
+			this.button5.Click += new System.EventHandler(this.button5_Click);
 			// 
 			// button4
 			// 
@@ -265,6 +271,7 @@ namespace TungMovie
 			this.button4.Size = new System.Drawing.Size(78, 50);
 			this.button4.TabIndex = 65;
 			this.button4.UseVisualStyleBackColor = false;
+			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
 			// button3
 			// 
@@ -279,6 +286,7 @@ namespace TungMovie
 			this.button3.TabIndex = 64;
 			this.button3.Text = "button3";
 			this.button3.UseVisualStyleBackColor = false;
+			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// button2
 			// 
@@ -292,6 +300,7 @@ namespace TungMovie
 			this.button2.Size = new System.Drawing.Size(78, 50);
 			this.button2.TabIndex = 53;
 			this.button2.UseVisualStyleBackColor = false;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// button1
 			// 
@@ -306,6 +315,7 @@ namespace TungMovie
 			this.button1.Size = new System.Drawing.Size(78, 50);
 			this.button1.TabIndex = 51;
 			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// AdminManagement
 			// 
@@ -333,7 +343,7 @@ namespace TungMovie
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.labelRegister);
 			this.Controls.Add(this.button1);
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "AdminManagement";
 			this.Text = "AdminManagement";
 			this.ResumeLayout(false);

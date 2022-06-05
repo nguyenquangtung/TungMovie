@@ -67,7 +67,7 @@ namespace TungMovie
 			this.button2.ForeColor = System.Drawing.Color.White;
 			this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
 			this.button2.Location = new System.Drawing.Point(120, 141);
-			this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.button2.Margin = new System.Windows.Forms.Padding(2);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(78, 50);
 			this.button2.TabIndex = 32;
@@ -170,7 +170,7 @@ namespace TungMovie
 			this.button3.ForeColor = System.Drawing.Color.White;
 			this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
 			this.button3.Location = new System.Drawing.Point(120, 211);
-			this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.button3.Margin = new System.Windows.Forms.Padding(2);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(78, 50);
 			this.button3.TabIndex = 43;
@@ -185,11 +185,12 @@ namespace TungMovie
 			this.button4.ForeColor = System.Drawing.Color.White;
 			this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
 			this.button4.Location = new System.Drawing.Point(120, 73);
-			this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.button4.Margin = new System.Windows.Forms.Padding(2);
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(78, 50);
 			this.button4.TabIndex = 44;
 			this.button4.UseVisualStyleBackColor = false;
+			this.button4.Click += new System.EventHandler(this.button4_Click);
 			// 
 			// button5
 			// 
@@ -198,12 +199,13 @@ namespace TungMovie
 			this.button5.ForeColor = System.Drawing.Color.White;
 			this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
 			this.button5.Location = new System.Drawing.Point(410, 141);
-			this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.button5.Margin = new System.Windows.Forms.Padding(2);
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(78, 50);
 			this.button5.TabIndex = 45;
 			this.button5.Text = "button5";
 			this.button5.UseVisualStyleBackColor = false;
+			this.button5.Click += new System.EventHandler(this.button5_Click);
 			// 
 			// button6
 			// 
@@ -212,11 +214,12 @@ namespace TungMovie
 			this.button6.ForeColor = System.Drawing.Color.White;
 			this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
 			this.button6.Location = new System.Drawing.Point(410, 212);
-			this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.button6.Margin = new System.Windows.Forms.Padding(2);
 			this.button6.Name = "button6";
 			this.button6.Size = new System.Drawing.Size(78, 50);
 			this.button6.TabIndex = 46;
 			this.button6.UseVisualStyleBackColor = false;
+			this.button6.Click += new System.EventHandler(this.button6_Click);
 			// 
 			// button8
 			// 
@@ -225,11 +228,12 @@ namespace TungMovie
 			this.button8.ForeColor = System.Drawing.Color.White;
 			this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
 			this.button8.Location = new System.Drawing.Point(120, 279);
-			this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.button8.Margin = new System.Windows.Forms.Padding(2);
 			this.button8.Name = "button8";
 			this.button8.Size = new System.Drawing.Size(78, 50);
 			this.button8.TabIndex = 48;
 			this.button8.UseVisualStyleBackColor = false;
+			this.button8.Click += new System.EventHandler(this.button8_Click);
 			// 
 			// button10
 			// 
@@ -238,11 +242,12 @@ namespace TungMovie
 			this.button10.ForeColor = System.Drawing.Color.White;
 			this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
 			this.button10.Location = new System.Drawing.Point(410, 67);
-			this.button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.button10.Margin = new System.Windows.Forms.Padding(2);
 			this.button10.Name = "button10";
 			this.button10.Size = new System.Drawing.Size(78, 50);
 			this.button10.TabIndex = 50;
 			this.button10.UseVisualStyleBackColor = false;
+			this.button10.Click += new System.EventHandler(this.button10_Click);
 			// 
 			// button9
 			// 
@@ -256,6 +261,7 @@ namespace TungMovie
 			this.button9.Size = new System.Drawing.Size(78, 50);
 			this.button9.TabIndex = 51;
 			this.button9.UseVisualStyleBackColor = false;
+			this.button9.Click += new System.EventHandler(this.button9_Click);
 			// 
 			// ManagerForm
 			// 
@@ -279,7 +285,7 @@ namespace TungMovie
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.labelRegister);
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "ManagerForm";
 			this.Text = "ManagerForm";
 			this.ResumeLayout(false);
