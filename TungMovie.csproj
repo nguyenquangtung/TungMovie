@@ -192,6 +192,7 @@
       <DependentUpon>StatiticsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Ticket.cs" />
+    <Compile Include="TicketInfo.cs" />
     <Compile Include="TicketManagement.cs">
       <SubType>Form</SubType>
     </Compile>

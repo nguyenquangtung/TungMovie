@@ -131,7 +131,7 @@ namespace TungMovie
 
         }
 
-        public void Load(int vt)
+        public void LoadAccount(int vt)
         {
             txtUsername.Text = dataGridView1.Rows[vt].Cells[0].Value.ToString();
             txtPassword.Text = dataGridView1.Rows[vt].Cells[1].Value.ToString();
@@ -308,6 +308,11 @@ namespace TungMovie
             txtEmail.Text = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[6].Value.ToString();
             txtBalance.Text = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[7].Value.ToString();
             txtRolecode.Text = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[8].Value.ToString();
+        }
+
+        private void EditAccount_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
