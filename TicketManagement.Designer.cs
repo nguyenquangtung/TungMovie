@@ -48,6 +48,7 @@ namespace TungMovie
             this.boxIdSchedule = new System.Windows.Forms.ComboBox();
             this.boxUsername = new System.Windows.Forms.ComboBox();
             this.boxIdSeat = new System.Windows.Forms.ComboBox();
+            this.timeBookingDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.gridTicketManagement)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,14 +99,14 @@ namespace TungMovie
             // 
             // dateBookingDate
             // 
-            this.dateBookingDate.CustomFormat = "   dd / MM / yyyy";
+            this.dateBookingDate.CustomFormat = "dd/MM/yyyy";
             this.dateBookingDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateBookingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateBookingDate.Location = new System.Drawing.Point(156, 156);
             this.dateBookingDate.MaxDate = new System.DateTime(2030, 1, 1, 0, 0, 0, 0);
             this.dateBookingDate.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             this.dateBookingDate.Name = "dateBookingDate";
-            this.dateBookingDate.Size = new System.Drawing.Size(188, 24);
+            this.dateBookingDate.Size = new System.Drawing.Size(125, 24);
             this.dateBookingDate.TabIndex = 100;
             // 
             // label2
@@ -174,14 +175,14 @@ namespace TungMovie
             this.txtPrice.Location = new System.Drawing.Point(156, 107);
             this.txtPrice.Multiline = true;
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(188, 31);
+            this.txtPrice.Size = new System.Drawing.Size(125, 31);
             this.txtPrice.TabIndex = 88;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 107);
+            this.label1.Location = new System.Drawing.Point(15, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 16);
             this.label1.TabIndex = 87;
@@ -236,12 +237,12 @@ namespace TungMovie
             this.gridTicketManagement.BackgroundColor = System.Drawing.Color.White;
             this.gridTicketManagement.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridTicketManagement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridTicketManagement.Location = new System.Drawing.Point(377, 12);
+            this.gridTicketManagement.Location = new System.Drawing.Point(414, 12);
             this.gridTicketManagement.Name = "gridTicketManagement";
             this.gridTicketManagement.ReadOnly = true;
             this.gridTicketManagement.RowHeadersVisible = false;
             this.gridTicketManagement.RowHeadersWidth = 51;
-            this.gridTicketManagement.Size = new System.Drawing.Size(525, 382);
+            this.gridTicketManagement.Size = new System.Drawing.Size(628, 382);
             this.gridTicketManagement.TabIndex = 85;
             // 
             // boxIdSchedule
@@ -295,12 +296,27 @@ namespace TungMovie
             this.boxIdSeat.Size = new System.Drawing.Size(70, 26);
             this.boxIdSeat.TabIndex = 113;
             // 
+            // timeBookingDate
+            // 
+            this.timeBookingDate.CustomFormat = "HH:mm:ss";
+            this.timeBookingDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeBookingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeBookingDate.Location = new System.Drawing.Point(287, 156);
+            this.timeBookingDate.MaxDate = new System.DateTime(2030, 1, 1, 0, 0, 0, 0);
+            this.timeBookingDate.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
+            this.timeBookingDate.Name = "timeBookingDate";
+            this.timeBookingDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.timeBookingDate.ShowUpDown = true;
+            this.timeBookingDate.Size = new System.Drawing.Size(95, 24);
+            this.timeBookingDate.TabIndex = 114;
+            // 
             // TicketManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(914, 406);
+            this.ClientSize = new System.Drawing.Size(1054, 406);
+            this.Controls.Add(this.timeBookingDate);
             this.Controls.Add(this.boxIdSeat);
             this.Controls.Add(this.boxUsername);
             this.Controls.Add(this.boxIdSchedule);
@@ -350,5 +366,6 @@ namespace TungMovie
         private System.Windows.Forms.ComboBox boxIdSchedule;
         private System.Windows.Forms.ComboBox boxUsername;
         private System.Windows.Forms.ComboBox boxIdSeat;
+        private System.Windows.Forms.DateTimePicker timeBookingDate;
     }
 }

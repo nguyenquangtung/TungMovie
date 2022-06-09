@@ -20,7 +20,6 @@ namespace TungMovie
             InitializeComponent();
         }
 
-
         public void ticket_id_box_Load()
         {
             boxTicketId.DataSource = ti.getTicketList();
@@ -55,10 +54,11 @@ namespace TungMovie
 
         public void LoadTicketGrid()
         {
-            this.Size = new Size(390, 445);
+            this.Size = new Size(405, 445);
             gridTicketManagement.RowTemplate.Height = 30;
             gridTicketManagement.Visible = false;
             gridTicketManagement.DataSource = ti.getTicketList();
+            gridTicketManagement.Columns[2].Width = 110;
         }
 
         private void TicketManagement_Load(object sender, EventArgs e)
@@ -74,19 +74,22 @@ namespace TungMovie
         {
             try
             {
+                string datetime;
                 int tid = Convert.ToInt32(boxTicketId.SelectedValue);
                 DataTable dt = new DataTable();
                 dt = ti.getTicketById(tid);
                 txtPrice.Text = dt.Rows[0][0].ToString();
                 if(dt.Rows[0][1].ToString().Equals(""))
                 {
-                    DateTime time = DateTime.Parse("01-01-2022").Date;
-                    dateBookingDate.Value = time;
+                    datetime = ("01-01-2022 00:00:00");
+
                 }
                 else
                 {
-                    dateBookingDate.Value = DateTime.Parse(dt.Rows[0][1].ToString());
+                    datetime = dt.Rows[0][1].ToString();
                 }
+                dateBookingDate.Value = DateTime.Parse(datetime);
+                timeBookingDate.Value = DateTime.Parse(datetime);
                 boxIdSchedule.Text = dt.Rows[0][2].ToString();
                 boxUsername.Text = dt.Rows[0][3].ToString();
                 boxIdSeat.Text = dt.Rows[0][4].ToString();
@@ -113,12 +116,12 @@ namespace TungMovie
             refresh();
             if (!(gridTicketManagement.Visible))
             {
-                this.Size = new Size(930, 445);
+                this.Size = new Size(1070, 445);
                 gridTicketManagement.Visible = true;
             }
             else
             {
-                this.Size = new Size(390, 445);
+                this.Size = new Size(405, 445);
                 gridTicketManagement.Visible = false;
             }
 

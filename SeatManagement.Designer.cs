@@ -29,50 +29,52 @@ namespace TungMovie
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDeleteSchedule = new System.Windows.Forms.Button();
-            this.btnUpdateSchedule = new System.Windows.Forms.Button();
+            this.btnUpdateSeat = new System.Windows.Forms.Button();
+            this.btnViewSeat = new System.Windows.Forms.Button();
             this.txtIdRoom = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.boxScheduleId = new System.Windows.Forms.ComboBox();
+            this.boxSeatId = new System.Windows.Forms.ComboBox();
             this.labelIdSeat = new System.Windows.Forms.Label();
             this.labelSeatManagement = new System.Windows.Forms.Label();
-            this.gridTicketManagement = new System.Windows.Forms.DataGridView();
+            this.gridSeatManagement = new System.Windows.Forms.DataGridView();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.txtKind = new System.Windows.Forms.TextBox();
             this.boxStatus = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.gridTicketManagement)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSeatManagement)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnDeleteSchedule
+            // btnUpdateSeat
             // 
-            this.btnDeleteSchedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.btnDeleteSchedule.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeleteSchedule.FlatAppearance.BorderSize = 0;
-            this.btnDeleteSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteSchedule.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteSchedule.Location = new System.Drawing.Point(18, 298);
-            this.btnDeleteSchedule.Name = "btnDeleteSchedule";
-            this.btnDeleteSchedule.Size = new System.Drawing.Size(100, 40);
-            this.btnDeleteSchedule.TabIndex = 135;
-            this.btnDeleteSchedule.Text = "UPDATE SEAT";
-            this.btnDeleteSchedule.UseVisualStyleBackColor = false;
+            this.btnUpdateSeat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnUpdateSeat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdateSeat.FlatAppearance.BorderSize = 0;
+            this.btnUpdateSeat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateSeat.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateSeat.Location = new System.Drawing.Point(18, 298);
+            this.btnUpdateSeat.Name = "btnUpdateSeat";
+            this.btnUpdateSeat.Size = new System.Drawing.Size(100, 40);
+            this.btnUpdateSeat.TabIndex = 135;
+            this.btnUpdateSeat.Text = "UPDATE SEAT";
+            this.btnUpdateSeat.UseVisualStyleBackColor = false;
+            this.btnUpdateSeat.Click += new System.EventHandler(this.btnUpdateSeat_Click);
             // 
-            // btnUpdateSchedule
+            // btnViewSeat
             // 
-            this.btnUpdateSchedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.btnUpdateSchedule.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdateSchedule.FlatAppearance.BorderSize = 0;
-            this.btnUpdateSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateSchedule.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateSchedule.Location = new System.Drawing.Point(156, 298);
-            this.btnUpdateSchedule.Name = "btnUpdateSchedule";
-            this.btnUpdateSchedule.Size = new System.Drawing.Size(100, 40);
-            this.btnUpdateSchedule.TabIndex = 134;
-            this.btnUpdateSchedule.Text = "VIEW SEAT";
-            this.btnUpdateSchedule.UseVisualStyleBackColor = false;
+            this.btnViewSeat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnViewSeat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnViewSeat.FlatAppearance.BorderSize = 0;
+            this.btnViewSeat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewSeat.ForeColor = System.Drawing.Color.White;
+            this.btnViewSeat.Location = new System.Drawing.Point(156, 298);
+            this.btnViewSeat.Name = "btnViewSeat";
+            this.btnViewSeat.Size = new System.Drawing.Size(100, 40);
+            this.btnViewSeat.TabIndex = 134;
+            this.btnViewSeat.Text = "VIEW SEAT";
+            this.btnViewSeat.UseVisualStyleBackColor = false;
+            this.btnViewSeat.Click += new System.EventHandler(this.btnViewSeat_Click);
             // 
             // txtIdRoom
             // 
@@ -124,20 +126,18 @@ namespace TungMovie
             this.label2.TabIndex = 125;
             this.label2.Text = "Code";
             // 
-            // boxScheduleId
+            // boxSeatId
             // 
-            this.boxScheduleId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.boxScheduleId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boxScheduleId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.boxScheduleId.FormattingEnabled = true;
-            this.boxScheduleId.ItemHeight = 16;
-            this.boxScheduleId.Items.AddRange(new object[] {
-            "find by id",
-            "find by name"});
-            this.boxScheduleId.Location = new System.Drawing.Point(156, 81);
-            this.boxScheduleId.Name = "boxScheduleId";
-            this.boxScheduleId.Size = new System.Drawing.Size(70, 24);
-            this.boxScheduleId.TabIndex = 124;
+            this.boxSeatId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.boxSeatId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boxSeatId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.boxSeatId.FormattingEnabled = true;
+            this.boxSeatId.ItemHeight = 16;
+            this.boxSeatId.Location = new System.Drawing.Point(156, 81);
+            this.boxSeatId.Name = "boxSeatId";
+            this.boxSeatId.Size = new System.Drawing.Size(70, 24);
+            this.boxSeatId.TabIndex = 124;
+            this.boxSeatId.SelectedIndexChanged += new System.EventHandler(this.boxSeatId_SelectedIndexChanged);
             // 
             // labelIdSeat
             // 
@@ -160,19 +160,20 @@ namespace TungMovie
             this.labelSeatManagement.TabIndex = 122;
             this.labelSeatManagement.Text = "Seat Management";
             // 
-            // gridTicketManagement
+            // gridSeatManagement
             // 
-            this.gridTicketManagement.AllowUserToAddRows = false;
-            this.gridTicketManagement.AllowUserToDeleteRows = false;
-            this.gridTicketManagement.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridTicketManagement.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridTicketManagement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridTicketManagement.Location = new System.Drawing.Point(288, 23);
-            this.gridTicketManagement.Name = "gridTicketManagement";
-            this.gridTicketManagement.ReadOnly = true;
-            this.gridTicketManagement.RowHeadersVisible = false;
-            this.gridTicketManagement.Size = new System.Drawing.Size(433, 315);
-            this.gridTicketManagement.TabIndex = 121;
+            this.gridSeatManagement.AllowUserToAddRows = false;
+            this.gridSeatManagement.AllowUserToDeleteRows = false;
+            this.gridSeatManagement.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridSeatManagement.BackgroundColor = System.Drawing.Color.White;
+            this.gridSeatManagement.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridSeatManagement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridSeatManagement.Location = new System.Drawing.Point(288, 23);
+            this.gridSeatManagement.Name = "gridSeatManagement";
+            this.gridSeatManagement.ReadOnly = true;
+            this.gridSeatManagement.RowHeadersVisible = false;
+            this.gridSeatManagement.Size = new System.Drawing.Size(433, 315);
+            this.gridSeatManagement.TabIndex = 121;
             // 
             // txtCode
             // 
@@ -201,9 +202,6 @@ namespace TungMovie
             this.boxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.boxStatus.FormattingEnabled = true;
             this.boxStatus.ItemHeight = 16;
-            this.boxStatus.Items.AddRange(new object[] {
-            "find by id",
-            "find by name"});
             this.boxStatus.Location = new System.Drawing.Point(156, 198);
             this.boxStatus.Name = "boxStatus";
             this.boxStatus.Size = new System.Drawing.Size(70, 24);
@@ -218,37 +216,38 @@ namespace TungMovie
             this.Controls.Add(this.boxStatus);
             this.Controls.Add(this.txtKind);
             this.Controls.Add(this.txtCode);
-            this.Controls.Add(this.btnDeleteSchedule);
-            this.Controls.Add(this.btnUpdateSchedule);
+            this.Controls.Add(this.btnUpdateSeat);
+            this.Controls.Add(this.btnViewSeat);
             this.Controls.Add(this.txtIdRoom);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.boxScheduleId);
+            this.Controls.Add(this.boxSeatId);
             this.Controls.Add(this.labelIdSeat);
             this.Controls.Add(this.labelSeatManagement);
-            this.Controls.Add(this.gridTicketManagement);
+            this.Controls.Add(this.gridSeatManagement);
             this.Name = "SeatManagement";
             this.Text = "SeatManagement";
-            ((System.ComponentModel.ISupportInitialize)(this.gridTicketManagement)).EndInit();
+            this.Load += new System.EventHandler(this.SeatManagement_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gridSeatManagement)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnDeleteSchedule;
-        private System.Windows.Forms.Button btnUpdateSchedule;
+        private System.Windows.Forms.Button btnUpdateSeat;
+        private System.Windows.Forms.Button btnViewSeat;
         private System.Windows.Forms.TextBox txtIdRoom;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox boxScheduleId;
+        private System.Windows.Forms.ComboBox boxSeatId;
         private System.Windows.Forms.Label labelIdSeat;
         private System.Windows.Forms.Label labelSeatManagement;
-        private System.Windows.Forms.DataGridView gridTicketManagement;
+        private System.Windows.Forms.DataGridView gridSeatManagement;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.TextBox txtKind;
         private System.Windows.Forms.ComboBox boxStatus;

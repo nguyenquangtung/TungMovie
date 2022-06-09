@@ -172,6 +172,7 @@
     <Compile Include="ScheduleManagement.Designer.cs">
       <DependentUpon>ScheduleManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Seat.cs" />
     <Compile Include="SeatManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +191,7 @@
     <Compile Include="StatiticsForm.Designer.cs">
       <DependentUpon>StatiticsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ticket.cs" />
     <Compile Include="TicketManagement.cs">
       <SubType>Form</SubType>
     </Compile>
