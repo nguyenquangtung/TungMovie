@@ -26,5 +26,10 @@ namespace TungMovie
         {
 
         }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
