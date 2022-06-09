@@ -16,14 +16,23 @@ namespace TungMovie
 		{
 			InitializeComponent();
 		}
-		SqlConnection connection;
-		SqlCommand command;
-		string str2 = @"Data Source=PC;Initial Catalog=Movie_ticket_management;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-		SqlDataAdapter adapter = new SqlDataAdapter();
-		DataTable table = new DataTable();
+		DataTable dtTicket = null;
+		TicketInfo Tick = new TicketInfo();
+
+		public void LoadDataGrid()
+		{
+			dtTicket = new DataTable();
+			dtTicket.Clear();
+
+			DataSet ds = Tick.getTicketInfo();
+			dtTicket = ds.Tables[0];
+			dataGridView1.DataSource = dtTicket;
+			dataGridView1.AutoResizeColumns();
+		}
+
 		private void ListSuccessedTicket_Load(object sender, EventArgs e)
 		{
-
+			LoadDataGrid();
 		}
 
 		private void button4_Click(object sender, EventArgs e)
@@ -36,9 +45,9 @@ namespace TungMovie
 
 		private void btnClear_Click(object sender, EventArgs e)
 		{
-			table.Clear();
+			dtTicket.Clear();
 
-			dataGridView1.DataSource = table;
+			dataGridView1.DataSource = dtTicket;
 			txtId.Text = "";
 			txtPrice.Text = "";
 			txtBookingdate.Text = "";
@@ -52,9 +61,9 @@ namespace TungMovie
 		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
 			dataGridView1.CurrentCell.Selected = true;
-			txtBookingdate.Text = dataGridView1.Rows[e.RowIndex].Cells["booking_date"].Value.ToString();
-			txtCreatedate.Text = dataGridView1.Rows[e.RowIndex].Cells["created_date"].Value.ToString();
-			txtId.Text = dataGridView1.Rows[e.RowIndex].Cells["ticketid"].Value.ToString();
+			/*txtBookingdate.Text = dataGridView1.Rows[e.RowIndex].Cells["booking_date"].Value.ToString();*/
+            /*txtCreatedate.Text = dataGridView1.Rows[e.RowIndex].Cells["created_date"].Value.ToString();*/
+            txtId.Text = dataGridView1.Rows[e.RowIndex].Cells["ticketid"].Value.ToString();
 			txtPrice.Text = dataGridView1.Rows[e.RowIndex].Cells["price"].Value.ToString();
 			txtScheduleid.Text = dataGridView1.Rows[e.RowIndex].Cells["schedule_id"].Value.ToString();
 			txtSeat.Text = dataGridView1.Rows[e.RowIndex].Cells["seat_id"].Value.ToString();
@@ -63,14 +72,7 @@ namespace TungMovie
 
 		private void btnShow_Click(object sender, EventArgs e)
 		{
-			connection = new SqlConnection(str2);
-			connection.Open();
-			command = connection.CreateCommand();
-			command.CommandText = "select * from [Ticket]";
-			adapter.SelectCommand = command;
-			table.Clear();
-			adapter.Fill(table);
-			dataGridView1.DataSource = table;
+			
 		}
 
 
