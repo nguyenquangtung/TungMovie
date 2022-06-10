@@ -95,9 +95,5 @@ namespace TungMovie
 			gridListMV.DataSource = x;
 		}
         }
-	private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-			txtSearch.Enabled = true;
-	}
     }
 }
