@@ -31,7 +31,7 @@ namespace TungMovie
 
 		private void ListSuccessedTicket_Load(object sender, EventArgs e)
 		{
-			LoadDataGrid();
+            LoadDataGrid();
 		}
 
 
@@ -64,14 +64,28 @@ namespace TungMovie
                     //Create a new document  
                     Microsoft.Office.Interop.Word.Document document = winword.Documents.Add(ref missing, ref missing, ref missing, ref missing);
 
-                    //Add paragraph with Heading 1 style  
-                    Microsoft.Office.Interop.Word.Paragraph para1 = document.Content.Paragraphs.Add(ref missing);
 
-                    //Create a table  
-                    int rows = gridBookedTicket.Rows.Count + 1;
+                    Microsoft.Office.Interop.Word.Paragraph para1 = document.Content.Paragraphs.Add(missing);
+                    para1.Range.InsertParagraph();
+                    object styleHeading1 = "Title";
+                    object styleHeading2 = "Normal";
+
+                    para1.Range.set_Style(ref styleHeading1);
+                    para1.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                    para1.Range.Font.Color = WdColor.wdColorAqua;
+                    para1.Range.Text = "Purchased Ticket\n\n";
+
+                    para1.Range.set_Style(ref styleHeading2);
+                    para1.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                    para1.Range.Font.Color = WdColor.wdColorBlack;
+                    para1.Range.Text = "Username: " + UserStore.StoreUsername.ToString() +"\n";
+                    para1.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+
+                    int rows = gridBookedTicket.Rows.Count;
                     int columns = gridBookedTicket.Columns.Count;
 
-                    Table T = document.Tables.Add(para1.Range, rows, columns, ref missing, ref missing);
+                    Microsoft.Office.Interop.Word.Paragraph para3 = document.Content.Paragraphs.Add(ref missing);
+                    Table T = document.Tables.Add(para3.Range, rows, columns, ref missing, ref missing);
 
                     T.Borders.Enable = 1;
 
@@ -82,9 +96,8 @@ namespace TungMovie
                         {
                             //Header 
                             T.Rows[1].Cells[j].Range.Text = gridBookedTicket.Columns[j - 1].HeaderText.ToString();
-                            T.Rows[1].Cells[j].Range.Font.Bold = 1;
                             T.Rows[1].Cells[j].Range.Font.Name = "verdana";
-                            T.Rows[1].Cells[j].Range.Font.Size = 10;
+                            T.Rows[1].Cells[j].Range.Font.Size = 9;
                             T.Rows[1].Cells[j].Shading.BackgroundPatternColor = WdColor.wdColorGray25;
                             T.Rows[1].Cells[j].VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalCenter;
                             T.Rows[1].Cells[j].Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
