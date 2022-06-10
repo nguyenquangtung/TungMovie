@@ -34,6 +34,16 @@ namespace TungMovie
             }
         }
 
+        public class ViettelPayPaymentStrategy : IPaymentStrategy
+        {
+            public void ExecutePayment(string username, string moviename, DateTime bookingdate, int usernumber, int price)
+            {
+                MessageBox.Show("Book ticket Successful with ViettelPay\n" + "User: " + username + "\nMovie: " + moviename
+                     + "\nDate: " + bookingdate.ToString() + "\nYour number: " + usernumber + "\nPrice: " + price, "Book Ticket", MessageBoxButtons.OK);
+            }
+        }
+
+
         public class PaymentContext
         {
             private IPaymentStrategy PaymentStrategy;

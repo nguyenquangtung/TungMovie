@@ -135,14 +135,19 @@ namespace TungMovie
                 PaymentStrategy.PaymentContext context = new PaymentStrategy.PaymentContext();
                 PaymentStrategy.MoMoPaymentStrategy momo = new PaymentStrategy.MoMoPaymentStrategy();
                 PaymentStrategy.ZaloPayPaymentStrategy zalo = new PaymentStrategy.ZaloPayPaymentStrategy();
+                PaymentStrategy.ViettelPayPaymentStrategy viettel = new PaymentStrategy.ViettelPayPaymentStrategy();
 
                 if (type.Equals("MoMo"))
                 {
                     context.SetPaymentStrategy(momo);
                 }
-                else
+                else if (type.Equals("ZaloPay"))
                 {
                     context.SetPaymentStrategy(zalo);
+                }
+                else
+                {
+                    context.SetPaymentStrategy(viettel);
                 }
 
                 if (ti.bookTicket(ticketid, price, bookingdatatime, scheduleid, username, seatid, roomid))
@@ -181,9 +186,13 @@ namespace TungMovie
             {
                 lb_receiver.Text = "Receiver's MoMo";
             }
-            else
+            else if (type.Equals("ZaloPay"))
             {
                 lb_receiver.Text = "Receiver's ZaloPay";
+            }
+            else
+            {
+                lb_receiver.Text = "Receiver's ViettelPay";
             }
         }
 

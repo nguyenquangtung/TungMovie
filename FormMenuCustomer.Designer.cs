@@ -84,6 +84,7 @@ namespace TungMovie
             this.btnCharacterList.Size = new System.Drawing.Size(78, 50);
             this.btnCharacterList.TabIndex = 68;
             this.btnCharacterList.UseVisualStyleBackColor = false;
+            this.btnCharacterList.Click += new System.EventHandler(this.btnCharacterList_Click);
             // 
             // btnUserInfo
             // 
@@ -129,9 +130,9 @@ namespace TungMovie
             this.label5.Location = new System.Drawing.Point(282, 222);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 20);
+            this.label5.Size = new System.Drawing.Size(50, 20);
             this.label5.TabIndex = 57;
-            this.label5.Text = "Filming";
+            this.label5.Text = "Movie";
             // 
             // label4
             // 

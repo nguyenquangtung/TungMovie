@@ -22,7 +22,7 @@ namespace TungMovie
             return dt;
         }
 
-        public DataSet getMovieSchedule()
+        public DataSet getMovieList()
         {
             SqlCommand command = new SqlCommand("SELECT movieid  'ID',name 'Movie', rating 'Rating', genre 'Genre', short_description 'Desciption', duration 'Duration', start_time 'Start_date', end_time 'End_Date' " +
                                                  "FROM[Movie_ticket_management].[dbo].[Movie] inner join[Movie_ticket_management].[dbo].[Schedule] on[Movie].movieid = [Schedule].movie_id ", db.GetConnection);

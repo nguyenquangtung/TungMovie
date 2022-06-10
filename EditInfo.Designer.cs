@@ -1,7 +1,7 @@
 ﻿
 namespace TungMovie
 {
-    partial class CustomerInfo
+    partial class EditInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -47,7 +47,7 @@ namespace TungMovie
             this.lb_Username = new System.Windows.Forms.Label();
             this.txt_Password = new System.Windows.Forms.TextBox();
             this.lb_Password = new System.Windows.Forms.Label();
-            this.labelAccountManagement = new System.Windows.Forms.Label();
+            this.lbInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtBalance
@@ -243,18 +243,18 @@ namespace TungMovie
             this.lb_Password.TabIndex = 175;
             this.lb_Password.Text = "Password";
             // 
-            // labelAccountManagement
+            // lbInfo
             // 
-            this.labelAccountManagement.AutoSize = true;
-            this.labelAccountManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAccountManagement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.labelAccountManagement.Location = new System.Drawing.Point(161, 27);
-            this.labelAccountManagement.Name = "labelAccountManagement";
-            this.labelAccountManagement.Size = new System.Drawing.Size(134, 31);
-            this.labelAccountManagement.TabIndex = 174;
-            this.labelAccountManagement.Text = "User Info";
+            this.lbInfo.AutoSize = true;
+            this.lbInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.lbInfo.Location = new System.Drawing.Point(161, 27);
+            this.lbInfo.Name = "lbInfo";
+            this.lbInfo.Size = new System.Drawing.Size(134, 31);
+            this.lbInfo.TabIndex = 174;
+            this.lbInfo.Text = "User Info";
             // 
-            // CustomerInfo
+            // EditInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -277,9 +277,9 @@ namespace TungMovie
             this.Controls.Add(this.lb_Username);
             this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.lb_Password);
-            this.Controls.Add(this.labelAccountManagement);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "CustomerInfo";
+            this.Controls.Add(this.lbInfo);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "EditInfo";
             this.Text = "EmployeeManagermentAccount";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -306,6 +306,6 @@ namespace TungMovie
         private System.Windows.Forms.Label lb_Username;
         private System.Windows.Forms.TextBox txt_Password;
         private System.Windows.Forms.Label lb_Password;
-        private System.Windows.Forms.Label labelAccountManagement;
+        private System.Windows.Forms.Label lbInfo;
     }
 }

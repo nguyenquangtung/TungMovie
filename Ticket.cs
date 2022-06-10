@@ -18,6 +18,16 @@ namespace TungMovie
             return dt;
         }
 
+        public DataTable getTicketListByUsername(string username)
+        {
+            SqlCommand cmd = new SqlCommand("Select ticketid, price, booking_date, schedule_id, seat_id, room_id  from Ticket where username = @username", db.GetConnection);
+            cmd.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
+
         public DataTable getUsernameList()
         {
             SqlCommand cmd = new SqlCommand("select username from [User]", db.GetConnection);

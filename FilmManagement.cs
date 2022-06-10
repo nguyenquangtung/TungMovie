@@ -22,12 +22,7 @@ namespace TungMovie
 
         public void LoadDataGrid()
         {
-            dtMovie = new DataTable();
-            dtMovie.Clear();
-
-            DataSet ds = Mi.getMovieSchedule();
-            dtMovie = ds.Tables[0];
-            gridFilmManagement.DataSource = dtMovie;
+            gridFilmManagement.DataSource = Mi.getmovielist();
             gridFilmManagement.AutoResizeColumns();
 
         }
@@ -47,9 +42,6 @@ namespace TungMovie
             txtGenre.Text = gridFilmManagement.Rows[i].Cells["Genre"].Value.ToString();
             txtDescription.Text = gridFilmManagement.Rows[i].Cells["Desciption"].Value.ToString();
             txtDuration.Text = gridFilmManagement.Rows[i].Cells["Duration"].Value.ToString();
-            dateStartTime.Value = DateTime.ParseExact(gridFilmManagement.Rows[i].Cells["Start_date"].Value.ToString(), "M/dd/yyyy h:mm:ss tt", System.Globalization.CultureInfo.InvariantCulture);      
-            dateEndTime.Value = DateTime.ParseExact(gridFilmManagement.Rows[i].Cells["End_Date"].Value.ToString(), "M/dd/yyyy h:mm:ss tt", System.Globalization.CultureInfo.InvariantCulture);
-            
 
         }
 

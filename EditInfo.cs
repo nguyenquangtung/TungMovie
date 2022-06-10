@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TungMovie
 {
-    public partial class CustomerInfo : Form
+    public partial class EditInfo : Form
     {
-        public CustomerInfo()
+        public EditInfo()
         {
             InitializeComponent();
         }

@@ -368,7 +368,8 @@ namespace TungMovie
             // 
             this.boxPaymentType.AutoCompleteCustomSource.AddRange(new string[] {
             "MoMo",
-            "ZaloPay"});
+            "ZaloPay",
+            "ViettelPay"});
             this.boxPaymentType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.boxPaymentType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boxPaymentType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
@@ -376,7 +377,8 @@ namespace TungMovie
             this.boxPaymentType.ItemHeight = 16;
             this.boxPaymentType.Items.AddRange(new object[] {
             "MoMo",
-            "ZaloPay"});
+            "ZaloPay",
+            "ViettelPay"});
             this.boxPaymentType.Location = new System.Drawing.Point(570, 283);
             this.boxPaymentType.Name = "boxPaymentType";
             this.boxPaymentType.Size = new System.Drawing.Size(102, 24);

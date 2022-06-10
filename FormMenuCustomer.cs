@@ -20,7 +20,7 @@ namespace TungMovie
 
         private void btnUserInfo_Click(object sender, EventArgs e)
         {
-			new CustomerInfo().Show();
+			new EditInfo().Show();
         }
 
         private void btnPurchasedTicket_Click(object sender, EventArgs e)
@@ -31,6 +31,11 @@ namespace TungMovie
         private void btnFilming_Click(object sender, EventArgs e)
         {
             new ListMV().Show();
+        }
+
+        private void btnCharacterList_Click(object sender, EventArgs e)
+        {
+            new ListCharater().Show();
         }
     }
 }

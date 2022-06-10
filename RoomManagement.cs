@@ -73,12 +73,12 @@ namespace TungMovie
         private void btnUpdateRoom_Click(object sender, EventArgs e)
         {
             
-            int id = Int32.Parse(boxRoomID.Text.ToString());
+            int roomid = Int32.Parse(boxRoomID.Text.ToString());
             string name = txtName.Text.ToString();
             int seat = Int32.Parse(txtSeatsAmount.Text.ToString());
             
 
-            if (room.UpdateRoom(id, name, seat))
+            if (room.UpdateRoom(roomid, name, seat))
             {
                 gridRoomManagement.DataSource = room.getroomlist();
                 MessageBox.Show("Success!", "UPDATE ROOM");

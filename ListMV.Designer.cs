@@ -75,6 +75,7 @@ namespace TungMovie
             this.gridListMV.AllowUserToAddRows = false;
             this.gridListMV.AllowUserToDeleteRows = false;
             this.gridListMV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridListMV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gridListMV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridListMV.Location = new System.Drawing.Point(12, 97);
             this.gridListMV.Name = "gridListMV";
@@ -87,12 +88,17 @@ namespace TungMovie
             // 
             // btnDetail
             // 
-            this.btnDetail.Location = new System.Drawing.Point(687, 47);
+            this.btnDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnDetail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDetail.FlatAppearance.BorderSize = 0;
+            this.btnDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetail.ForeColor = System.Drawing.Color.White;
+            this.btnDetail.Location = new System.Drawing.Point(665, 54);
             this.btnDetail.Name = "btnDetail";
-            this.btnDetail.Size = new System.Drawing.Size(101, 33);
-            this.btnDetail.TabIndex = 26;
+            this.btnDetail.Size = new System.Drawing.Size(123, 22);
+            this.btnDetail.TabIndex = 137;
             this.btnDetail.Text = "Choose Schedule";
-            this.btnDetail.UseVisualStyleBackColor = true;
+            this.btnDetail.UseVisualStyleBackColor = false;
             this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
             // 
             // ListMV

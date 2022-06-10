@@ -56,9 +56,10 @@ namespace TungMovie
                 return false;
             }
         }
-        public bool UpdateRoom(int id, string name, int seat)
+        public bool UpdateRoom(int roomid, string name, int seat)
         {
-            SqlCommand command = new SqlCommand("update Room set name = @name, num_of_seats = @seat", db.GetConnection);
+            SqlCommand command = new SqlCommand("update Room set name = @name, num_of_seats = @seat where roomid = @roomid", db.GetConnection);
+            command.Parameters.Add("@roomid", SqlDbType.Int).Value = roomid;
             command.Parameters.Add("@name", SqlDbType.VarChar).Value = name;
             command.Parameters.Add("@seat", SqlDbType.Int).Value = seat;
 

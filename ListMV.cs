@@ -24,14 +24,16 @@ namespace TungMovie
 		}
 		public void ListMV_grid_Load()
 		{
-			gridListMV.RowTemplate.Height = 45;
+			gridListMV.RowTemplate.Height = 90;
+			gridListMV.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 			gridListMV.DataSource = listMovie.getmovielist();
-			gridListMV.Columns[0].Width = 70;
-			gridListMV.Columns[1].Width = 80;
-			gridListMV.Columns[2].Width = 60;
-			gridListMV.Columns[3].Width = 60;
-			gridListMV.Columns[4].Width = 60;
-			gridListMV.Columns[5].Width = 80;
+			gridListMV.Columns[0].Width = 30;
+			gridListMV.Columns[1].Width = 50;
+			gridListMV.Columns[2].Width = 50;
+			gridListMV.Columns[3].Width = 30;
+			gridListMV.Columns[4].Width = 40;
+			gridListMV.Columns[5].Width = 150;
+			gridListMV.Columns[6].Width = 60;
 			gridListMV.AllowUserToResizeColumns = false;
 		}
 		private void ListMV_Load(object sender, EventArgs e)
