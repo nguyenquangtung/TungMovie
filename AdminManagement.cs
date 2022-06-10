@@ -27,7 +27,7 @@ namespace TungMovie
 
         private void manager_btn_Click(object sender, EventArgs e)
         {
-            new EmployeeManagermentAccount().Show();
+            new CustomerInfo().Show();
         }
 
         private void room_btn_Click(object sender, EventArgs e)
@@ -62,12 +62,11 @@ namespace TungMovie
 
 		private void button4_Click(object sender, EventArgs e)
 		{
-            new ManagerCustomerAccount().Show();
         }
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-            new EmployeeManagermentAccount().Show();
+            new CustomerInfo().Show();
 		}
 
 		private void button2_Click(object sender, EventArgs e)

@@ -66,11 +66,11 @@
       <DependentUpon>Chat.cs</DependentUpon>
     </Compile>
     <Compile Include="DB.cs" />
-    <Compile Include="EmployeeManagermentAccount.cs">
+    <Compile Include="CustomerInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmployeeManagermentAccount.Designer.cs">
-      <DependentUpon>EmployeeManagermentAccount.cs</DependentUpon>
+    <Compile Include="CustomerInfo.Designer.cs">
+      <DependentUpon>CustomerInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Film management.cs">
       <SubType>Form</SubType>
@@ -91,11 +91,11 @@
     <Compile Include="ListSuccessedTicket.Designer.cs">
       <DependentUpon>ListSuccessedTicket.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditAccount.cs">
+    <Compile Include="UserManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditAccount.Designer.cs">
-      <DependentUpon>EditAccount.cs</DependentUpon>
+    <Compile Include="UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -115,23 +115,11 @@
     <Compile Include="ListCharater.Designer.cs">
       <DependentUpon>ListCharater.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListMovie2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListMovie2.Designer.cs">
-      <DependentUpon>ListMovie2.cs</DependentUpon>
-    </Compile>
     <Compile Include="ListMV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ListMV.Designer.cs">
       <DependentUpon>ListMV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ManagerCustomerAccount.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManagerCustomerAccount.Designer.cs">
-      <DependentUpon>ManagerCustomerAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerForm.cs">
       <SubType>Form</SubType>
@@ -139,22 +127,11 @@
     <Compile Include="ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Moviedetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Moviedetail.Designer.cs">
-      <DependentUpon>Moviedetail.cs</DependentUpon>
-    </Compile>
     <Compile Include="MovieInfo.cs" />
-    <Compile Include="PanelListMovie.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="PanelListMovie.Designer.cs">
-      <DependentUpon>PanelListMovie.cs</DependentUpon>
-    </Compile>
     <Compile Include="PaymentStrategy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Room.cs" />
     <Compile Include="RoomManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,8 +182,8 @@
     <EmbeddedResource Include="Chat.resx">
       <DependentUpon>Chat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeManagermentAccount.resx">
-      <DependentUpon>EmployeeManagermentAccount.cs</DependentUpon>
+    <EmbeddedResource Include="CustomerInfo.resx">
+      <DependentUpon>CustomerInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Film management.resx">
       <DependentUpon>Film management.cs</DependentUpon>
@@ -217,8 +194,8 @@
     <EmbeddedResource Include="ListSuccessedTicket.resx">
       <DependentUpon>ListSuccessedTicket.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditAccount.resx">
-      <DependentUpon>EditAccount.cs</DependentUpon>
+    <EmbeddedResource Include="UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -229,23 +206,11 @@
     <EmbeddedResource Include="ListCharater.resx">
       <DependentUpon>ListCharater.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListMovie2.resx">
-      <DependentUpon>ListMovie2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ListMV.resx">
       <DependentUpon>ListMV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagerCustomerAccount.resx">
-      <DependentUpon>ManagerCustomerAccount.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Moviedetail.resx">
-      <DependentUpon>Moviedetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PanelListMovie.resx">
-      <DependentUpon>PanelListMovie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

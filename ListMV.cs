@@ -15,6 +15,9 @@ namespace TungMovie
 	{
 		ListMovie listMovie = new ListMovie();
 		DB db = new DB();
+		string getmoviename;
+		int getmovieid;
+
 		public ListMV()
 		{
 			InitializeComponent();
@@ -36,19 +39,6 @@ namespace TungMovie
 			ListMV_grid_Load();			
 		}
 
-		private void btnSearch_Click(object sender, EventArgs e)
-		{
-			if (comboBox1.Text == "find by id")
-			{
-				int id = Convert.ToInt32(txtSearch.Text.ToString());
-				gridListMV.DataSource = listMovie.GetMovieById(id);
-			}
-			else if (comboBox1.Text == "find by name")
-			{
-				string name = txtSearch.Text.ToString();
-				gridListMV.DataSource = listMovie.GetMovieByName(name);
-			}
-		}
 
         	private void txtSearch_TextChanged(object sender, EventArgs e)
         	{
@@ -68,5 +58,28 @@ namespace TungMovie
 				gridListMV.DataSource = listMovie.GetMovieByName(name);
 			}
         	}
-    	}
+
+        private void gridListMV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1 && gridListMV.Rows[e.RowIndex].Cells[e.ColumnIndex] != null)
+            {
+                int movieid = Convert.ToInt32(gridListMV.Rows[e.RowIndex].Cells[0].Value.ToString());
+				DataTable dt = listMovie.getMovieIdAndNameById(movieid);
+				getmovieid = Convert.ToInt32(dt.Rows[0][0].ToString());
+				getmoviename = dt.Rows[0][1].ToString();
+			}
+        }
+
+        private void btnDetail_Click(object sender, EventArgs e)
+        {
+			if(getmoviename != null)
+            {
+				new BuyTicket(getmovieid,getmoviename).Show();
+            }
+			else
+            {
+				MessageBox.Show("Please select a movie name", "List Movie", MessageBoxButtons.OK);
+			}
+        }
+    }
 }

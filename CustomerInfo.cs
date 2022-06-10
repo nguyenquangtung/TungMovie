@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace TungMovie
 {
-    public partial class ManagerCustomerAccount : Form
+    public partial class CustomerInfo : Form
     {
-		private AdminManagement adminManagement;
-
-		public ManagerCustomerAccount()
+        public CustomerInfo()
         {
             InitializeComponent();
         }
-
-		public ManagerCustomerAccount(AdminManagement adminManagement)
-		{
-			this.adminManagement = adminManagement;
-		}
-	}
+    }
 }

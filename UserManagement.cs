@@ -11,15 +11,15 @@ using System.Data.SqlClient;
 
 namespace TungMovie
 {
-    public partial class EditAccount : Form
+    public partial class UserManagement : Form
     {
-        public EditAccount()
+        public UserManagement()
         {
             InitializeComponent();
         }
         SqlConnection connection;
         SqlCommand command;
-        string str2 = @"Data Source=LAPTOP-47SVL2BP;Initial Catalog=Movie_ticket_management;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        string str2 = @"Data Source=Fox/Fox;Initial Catalog=Movie_ticket_management;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         private void btnClear_Click(object sender, EventArgs e)
@@ -56,28 +56,6 @@ namespace TungMovie
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //connection = new SqlConnection(str2);
-            //connection.Open();
-            //command = connection.CreateCommand();
-            //command.CommandText = "proc_Add_account";
-            //command.CommandType = CommandType.StoredProcedure;
-            //command.Parameters.AddWithValue("username", txtUsername.Text);
-            //command.Parameters.AddWithValue("password", txtPassword.Text);
-            //command.Parameters.AddWithValue("fullname", txtFullname.Text);
-            //command.Parameters.AddWithValue("address", txtAddress.Text);
-            //command.Parameters.AddWithValue("phone", txtphone.Text);
-            //command.Parameters.AddWithValue("birthday", txtBirthday.Text);
-            //command.Parameters.AddWithValue("email", txtEmail.Text);
-            //command.Parameters.AddWithValue("balance", txtBalance.Text);
-            //command.Parameters.AddWithValue("rolecode", txtRolecode.Text);
-            //command.Parameters.AddWithValue("createdBy", "admin");
-            //command.ExecuteNonQuery(); 
-            //command = connection.CreateCommand();
-            //command.CommandText = "select * from [User]";
-            //adapter.SelectCommand = command;
-            //table.Clear();
-            //adapter.Fill(table);
-            //dataGridView1.DataSource = table;
 
             connection = new SqlConnection(str2);
             connection.Open();

@@ -16,13 +16,27 @@ namespace TungMovie
         Seat se = new Seat();
         DateTime bookingdatatime;
         string username;
+        string moviename;
+        int movie_id;
         Ticket ti = new Ticket();
 
-        int movie_id;
 
-        public BuyTicket()
+
+        public BuyTicket(int get_movieid, string get_moviename)
         {
+            movie_id = get_movieid;
+            moviename = get_moviename;
             InitializeComponent();
+        }
+
+        private void BuyTicket_Load(object sender, EventArgs e)
+        {
+            username = UserStore.StoreUsername;
+            txtUsername.Text = username;
+            boxScheduleId_load(movie_id);
+            boxPaymentType.SelectedIndex = 0;
+            txtIdMovie.Text = movie_id.ToString();
+            txtMovieName.Text = moviename;
         }
 
         private void boxScheduleId_load(int movie_id)
@@ -39,20 +53,6 @@ namespace TungMovie
             boxIdSeat.ValueMember = "seatid";
             boxIdSeat.DisplayMember = "seatid";
             boxIdSeat.SelectedIndex = -1;
-        }
-
-        public BuyTicket(int selected_movie_id)
-        {
-            movie_id = selected_movie_id;
-        }
-
-        private void ChooseSchedule_Load(object sender, EventArgs e)
-        {
-            movie_id = 1;
-            username = UserStore.StoreUsername;
-            txtUsername.Text = username;
-            boxScheduleId_load(movie_id);
-            boxPaymentType.SelectedIndex = 0;
         }
 
         private void boxScheduleId_SelectedIndexChanged(object sender, EventArgs e)
@@ -131,7 +131,7 @@ namespace TungMovie
                 int ticketid = Int32.Parse(txtIdTicket.Text);
                 string type = boxPaymentType.SelectedItem.ToString();
                 int usernumber = Int32.Parse(txtUserNumber.Text);
-                string moviename = txtMovieName.Text;
+                moviename = txtMovieName.Text;
                 PaymentStrategy.PaymentContext context = new PaymentStrategy.PaymentContext();
                 PaymentStrategy.MoMoPaymentStrategy momo = new PaymentStrategy.MoMoPaymentStrategy();
                 PaymentStrategy.ZaloPayPaymentStrategy zalo = new PaymentStrategy.ZaloPayPaymentStrategy();
@@ -186,5 +186,6 @@ namespace TungMovie
                 lb_receiver.Text = "Receiver's ZaloPay";
             }
         }
+
     }
 }

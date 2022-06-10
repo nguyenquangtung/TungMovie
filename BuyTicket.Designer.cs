@@ -440,7 +440,7 @@ namespace TungMovie
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(784, 516);
+            this.ClientSize = new System.Drawing.Size(784, 475);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtUserNumber);
             this.Controls.Add(this.lb_receiver);
@@ -476,7 +476,7 @@ namespace TungMovie
             this.Controls.Add(this.labelSched);
             this.Name = "BuyTicket";
             this.Text = "BuyTicket";
-            this.Load += new System.EventHandler(this.ChooseSchedule_Load);
+            this.Load += new System.EventHandler(this.BuyTicket_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

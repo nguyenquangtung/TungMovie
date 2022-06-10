@@ -11,9 +11,29 @@ namespace TungMovie
     internal class ListMovie
     {
         DB db = new DB();
+
+        public DataTable getMovieIdAndNameById(int movieid)
+        {
+            SqlCommand command = new SqlCommand("select movieid, name from [Movie] where movieid = @movieid", db.GetConnection);
+            command.Parameters.AddWithValue("@movieid", movieid);
+            SqlDataAdapter sda = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
+
+        public DataTable gettotalmovieamount()
+        {
+            SqlCommand command = new SqlCommand("select count(movieid) from Movie", db.GetConnection);
+            SqlDataAdapter sda = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
+
         public DataTable getmovielist()
         {
-            SqlCommand command = new SqlCommand("select movieid  'ID',name 'Movie',thumbnail 'Image', rating 'Rating', genre 'Genre', short_description 'Desciption', duration 'Duration', trailer 'Trailer' from [Movie]", db.GetConnection);
+            SqlCommand command = new SqlCommand("select movieid  'ID',name 'Movie',thumbnail 'Image', rating 'Rating', genre 'Genre', short_description 'Desciption', duration 'Duration' from [Movie]", db.GetConnection);
             SqlDataAdapter sda = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -21,7 +41,7 @@ namespace TungMovie
         }
         public DataTable GetMovieById(int id)
         {
-            SqlCommand cmd = new SqlCommand("SELECT movieid 'ID',name 'Movie',thumbnail 'Image', rating 'Rating', genre 'Genre', short_description 'Desciption', duration 'Duration', trailer 'Trailer' FROM Movie WHERE movieid LIKE '%" + id + "%' ", db.GetConnection);
+            SqlCommand cmd = new SqlCommand("SELECT movieid 'ID',name 'Movie',thumbnail 'Image', rating 'Rating', genre 'Genre', short_description 'Desciption', duration 'Duration' FROM Movie WHERE movieid LIKE '%" + id + "%' ", db.GetConnection);
             cmd.Parameters.AddWithValue("@movieid", id);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -30,7 +50,7 @@ namespace TungMovie
         }
         public DataTable GetMovieByName(string name)
         {
-            SqlCommand cmd = new SqlCommand("SELECT movieid 'ID',name 'Movie',thumbnail 'Image', rating 'Rating', genre 'Genre', short_description 'Desciption', duration 'Duration', trailer 'Trailer' FROM Movie WHERE name LIKE '%" + name + "%' ", db.GetConnection);
+            SqlCommand cmd = new SqlCommand("SELECT movieid 'ID',name 'Movie',thumbnail 'Image', rating 'Rating', genre 'Genre', short_description 'Desciption', duration 'Duration' FROM Movie WHERE name LIKE '%" + name + "%' ", db.GetConnection);
             cmd.Parameters.AddWithValue("@name", name);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();

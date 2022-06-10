@@ -1,7 +1,7 @@
 ﻿
 namespace TungMovie
 {
-	partial class EditAccount
+	partial class UserManagement
 	{
 		/// <summary>
 		/// Required designer variable.

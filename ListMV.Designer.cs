@@ -29,13 +29,46 @@ namespace TungMovie
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.gridListMV = new System.Windows.Forms.DataGridView();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.labelRegister = new System.Windows.Forms.Label();
+            this.gridListMV = new System.Windows.Forms.DataGridView();
+            this.btnDetail = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridListMV)).BeginInit();
             this.SuspendLayout();
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearch.Location = new System.Drawing.Point(12, 54);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(392, 21);
+            this.txtSearch.TabIndex = 1;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 13;
+            this.comboBox1.Items.AddRange(new object[] {
+            "find by id",
+            "find by name"});
+            this.comboBox1.Location = new System.Drawing.Point(410, 54);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.TabIndex = 2;
+            // 
+            // labelRegister
+            // 
+            this.labelRegister.AutoSize = true;
+            this.labelRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.labelRegister.Location = new System.Drawing.Point(6, 9);
+            this.labelRegister.Name = "labelRegister";
+            this.labelRegister.Size = new System.Drawing.Size(91, 31);
+            this.labelRegister.TabIndex = 25;
+            this.labelRegister.Text = "Movie";
             // 
             // gridListMV
             // 
@@ -43,73 +76,35 @@ namespace TungMovie
             this.gridListMV.AllowUserToDeleteRows = false;
             this.gridListMV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridListMV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridListMV.Location = new System.Drawing.Point(16, 119);
-            this.gridListMV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridListMV.Location = new System.Drawing.Point(12, 97);
             this.gridListMV.Name = "gridListMV";
             this.gridListMV.ReadOnly = true;
             this.gridListMV.RowHeadersVisible = false;
             this.gridListMV.RowHeadersWidth = 51;
-            this.gridListMV.Size = new System.Drawing.Size(1035, 420);
+            this.gridListMV.Size = new System.Drawing.Size(776, 341);
             this.gridListMV.TabIndex = 0;
+            this.gridListMV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridListMV_CellContentClick);
             // 
-            // txtSearch
+            // btnDetail
             // 
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.Location = new System.Drawing.Point(89, 58);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtSearch.Multiline = true;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(522, 40);
-            this.txtSearch.TabIndex = 1;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 16;
-            this.comboBox1.Items.AddRange(new object[] {
-            "find by id",
-            "find by name"});
-            this.comboBox1.Location = new System.Drawing.Point(645, 69);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(132, 24);
-            this.comboBox1.TabIndex = 2;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(808, 58);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(117, 41);
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // labelRegister
-            // 
-            this.labelRegister.AutoSize = true;
-            this.labelRegister.Font = new System.Drawing.Font("VNI-Cooper", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.labelRegister.Location = new System.Drawing.Point(7, 6);
-            this.labelRegister.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelRegister.Name = "labelRegister";
-            this.labelRegister.Size = new System.Drawing.Size(131, 48);
-            this.labelRegister.TabIndex = 25;
-            this.labelRegister.Text = "Movie";
+            this.btnDetail.Location = new System.Drawing.Point(687, 47);
+            this.btnDetail.Name = "btnDetail";
+            this.btnDetail.Size = new System.Drawing.Size(101, 33);
+            this.btnDetail.TabIndex = 26;
+            this.btnDetail.Text = "Choose Schedule";
+            this.btnDetail.UseVisualStyleBackColor = true;
+            this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
             // 
             // ListMV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDetail);
             this.Controls.Add(this.labelRegister);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.gridListMV);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ListMV";
             this.Text = "ListMV";
             this.Load += new System.EventHandler(this.ListMV_Load);
@@ -120,11 +115,10 @@ namespace TungMovie
 		}
 
 		#endregion
-
-		private System.Windows.Forms.DataGridView gridListMV;
 		private System.Windows.Forms.TextBox txtSearch;
-		private System.Windows.Forms.Button btnSearch;
 		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.Label labelRegister;
-	}
+        private System.Windows.Forms.DataGridView gridListMV;
+        private System.Windows.Forms.Button btnDetail;
+    }
 }
