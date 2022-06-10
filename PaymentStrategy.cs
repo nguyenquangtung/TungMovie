@@ -3,40 +3,34 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TungMovie
 {
     class PaymentStrategy
     {
 
-
         public interface IPaymentStrategy
         {
-            void ExecutePayment(string a, string b, int amount);
+            void ExecutePayment(string username, string moviename, DateTime bookingdate, int usernumber, int price);
         }
 
 
         public class MoMoPaymentStrategy : IPaymentStrategy
         {
-            public void ExecutePayment(string a, string b, int amount)
+            public void ExecutePayment(string username, string moviename, DateTime bookingdate, int usernumber, int price)
             {
- 
+                MessageBox.Show("Book ticket Successful with MoMo\n" + "User: " +username +"\nMovie: " +moviename
+                    + "\nDate: " +bookingdate.ToString() + "\nYour number: "+usernumber + "\nPrice: " + price, "Book Ticket", MessageBoxButtons.OK);
             }
         }
 
-        public class VNPayPaymentStrategy : IPaymentStrategy
+        public class ZaloPayPaymentStrategy : IPaymentStrategy
         {
-            public void ExecutePayment(string a, string b, int amount)
+            public void ExecutePayment(string username, string moviename, DateTime bookingdate, int usernumber, int price)
             {
-  
-            }
-        }
-
-        public class QRPayPaymentStrategy : IPaymentStrategy
-        {
-            public void ExecutePayment(string a, string b, int amount)
-            {
- 
+                MessageBox.Show("Book ticket Successful with ZaloPay\n" + "User: " + username + "\nMovie: " + moviename
+                     + "\nDate: " + bookingdate.ToString() + "\nYour number: " + usernumber + "\nPrice: " + price, "Book Ticket", MessageBoxButtons.OK);
             }
         }
 
@@ -44,15 +38,14 @@ namespace TungMovie
         {
             private IPaymentStrategy PaymentStrategy;
 
-
             public void SetPaymentStrategy(IPaymentStrategy strategy)
             {
                 this.PaymentStrategy = strategy;
             }
 
-            public void ExecutePayment(string a, string b, int amount)
+            public void ExecutePayment(string username, string moviename, DateTime bookingdate, int usernumber, int price)
             {
-                PaymentStrategy.ExecutePayment(a, b, amount);
+                PaymentStrategy.ExecutePayment( username,  moviename,  bookingdate,  usernumber,  price);
             }
         }
     }

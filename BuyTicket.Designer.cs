@@ -44,19 +44,24 @@ namespace TungMovie
             this.timeEnd = new System.Windows.Forms.DateTimePicker();
             this.btnBookTicket = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMovieName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtSeatKind = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.labelTicketManagement = new System.Windows.Forms.Label();
             this.boxIdSeat = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtIdTicket = new System.Windows.Forms.TextBox();
+            this.boxPaymentType = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lb_receiver = new System.Windows.Forms.Label();
+            this.txtUserNumber = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dateStartTime
@@ -109,11 +114,11 @@ namespace TungMovie
             this.labelSched.AutoSize = true;
             this.labelSched.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSched.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.labelSched.Location = new System.Drawing.Point(30, 48);
+            this.labelSched.Location = new System.Drawing.Point(329, 24);
             this.labelSched.Name = "labelSched";
-            this.labelSched.Size = new System.Drawing.Size(243, 31);
+            this.labelSched.Size = new System.Drawing.Size(94, 31);
             this.labelSched.TabIndex = 102;
-            this.labelSched.Text = "Choose Schedule";
+            this.labelSched.Text = "Ticket";
             // 
             // dateEndTime
             // 
@@ -212,7 +217,7 @@ namespace TungMovie
             this.btnBookTicket.FlatAppearance.BorderSize = 0;
             this.btnBookTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBookTicket.ForeColor = System.Drawing.Color.White;
-            this.btnBookTicket.Location = new System.Drawing.Point(238, 464);
+            this.btnBookTicket.Location = new System.Drawing.Point(250, 418);
             this.btnBookTicket.Name = "btnBookTicket";
             this.btnBookTicket.Size = new System.Drawing.Size(100, 40);
             this.btnBookTicket.TabIndex = 118;
@@ -227,7 +232,7 @@ namespace TungMovie
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(368, 464);
+            this.btnCancel.Location = new System.Drawing.Point(432, 418);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 40);
             this.btnCancel.TabIndex = 119;
@@ -235,15 +240,15 @@ namespace TungMovie
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // textBox2
+            // txtMovieName
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(155, 288);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(195, 15);
-            this.textBox2.TabIndex = 134;
+            this.txtMovieName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtMovieName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMovieName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.txtMovieName.Location = new System.Drawing.Point(155, 288);
+            this.txtMovieName.Name = "txtMovieName";
+            this.txtMovieName.Size = new System.Drawing.Size(195, 15);
+            this.txtMovieName.TabIndex = 134;
             // 
             // label1
             // 
@@ -262,7 +267,7 @@ namespace TungMovie
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.txtPrice.Location = new System.Drawing.Point(570, 210);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(70, 15);
+            this.txtPrice.Size = new System.Drawing.Size(102, 15);
             this.txtPrice.TabIndex = 132;
             // 
             // label5
@@ -294,17 +299,6 @@ namespace TungMovie
             this.label10.Size = new System.Drawing.Size(39, 16);
             this.label10.TabIndex = 121;
             this.label10.Text = "Price";
-            // 
-            // labelTicketManagement
-            // 
-            this.labelTicketManagement.AutoSize = true;
-            this.labelTicketManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTicketManagement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.labelTicketManagement.Location = new System.Drawing.Point(426, 48);
-            this.labelTicketManagement.Name = "labelTicketManagement";
-            this.labelTicketManagement.Size = new System.Drawing.Size(182, 31);
-            this.labelTicketManagement.TabIndex = 120;
-            this.labelTicketManagement.Text = "Choose Seat";
             // 
             // boxIdSeat
             // 
@@ -370,25 +364,101 @@ namespace TungMovie
             this.txtIdTicket.Size = new System.Drawing.Size(55, 15);
             this.txtIdTicket.TabIndex = 139;
             // 
+            // boxPaymentType
+            // 
+            this.boxPaymentType.AutoCompleteCustomSource.AddRange(new string[] {
+            "MoMo",
+            "ZaloPay"});
+            this.boxPaymentType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.boxPaymentType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boxPaymentType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.boxPaymentType.FormattingEnabled = true;
+            this.boxPaymentType.ItemHeight = 16;
+            this.boxPaymentType.Items.AddRange(new object[] {
+            "MoMo",
+            "ZaloPay"});
+            this.boxPaymentType.Location = new System.Drawing.Point(570, 283);
+            this.boxPaymentType.Name = "boxPaymentType";
+            this.boxPaymentType.Size = new System.Drawing.Size(102, 24);
+            this.boxPaymentType.TabIndex = 142;
+            this.boxPaymentType.SelectedIndexChanged += new System.EventHandler(this.boxPaymentType_SelectedIndexChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(429, 287);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(90, 16);
+            this.label11.TabIndex = 141;
+            this.label11.Text = "Payment type";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.textBox1.Location = new System.Drawing.Point(570, 326);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(102, 15);
+            this.textBox1.TabIndex = 143;
+            this.textBox1.Text = "0921886123";
+            // 
+            // lb_receiver
+            // 
+            this.lb_receiver.AutoSize = true;
+            this.lb_receiver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_receiver.Location = new System.Drawing.Point(429, 325);
+            this.lb_receiver.Name = "lb_receiver";
+            this.lb_receiver.Size = new System.Drawing.Size(114, 16);
+            this.lb_receiver.TabIndex = 144;
+            this.lb_receiver.Text = "Receiver\'s Momo";
+            // 
+            // txtUserNumber
+            // 
+            this.txtUserNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtUserNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUserNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.txtUserNumber.Location = new System.Drawing.Point(570, 363);
+            this.txtUserNumber.Name = "txtUserNumber";
+            this.txtUserNumber.Size = new System.Drawing.Size(102, 15);
+            this.txtUserNumber.TabIndex = 145;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(429, 362);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(95, 16);
+            this.label13.TabIndex = 146;
+            this.label13.Text = "User\'s number";
+            // 
             // BuyTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(710, 516);
+            this.ClientSize = new System.Drawing.Size(784, 516);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtUserNumber);
+            this.Controls.Add(this.lb_receiver);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.boxPaymentType);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtIdTicket);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.boxIdSeat);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtMovieName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtSeatKind);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.labelTicketManagement);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnBookTicket);
             this.Controls.Add(this.timeEnd);
@@ -405,7 +475,7 @@ namespace TungMovie
             this.Controls.Add(this.labelIdFilm);
             this.Controls.Add(this.labelSched);
             this.Name = "BuyTicket";
-            this.Text = "ScheduleManagement";
+            this.Text = "BuyTicket";
             this.Load += new System.EventHandler(this.ChooseSchedule_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -429,18 +499,23 @@ namespace TungMovie
         private System.Windows.Forms.DateTimePicker timeEnd;
         private System.Windows.Forms.Button btnBookTicket;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMovieName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtSeatKind;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label labelTicketManagement;
         private System.Windows.Forms.ComboBox boxIdSeat;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtIdTicket;
+        private System.Windows.Forms.ComboBox boxPaymentType;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lb_receiver;
+        private System.Windows.Forms.TextBox txtUserNumber;
+        private System.Windows.Forms.Label label13;
     }
 }

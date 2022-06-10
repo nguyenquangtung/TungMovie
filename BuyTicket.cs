@@ -52,6 +52,7 @@ namespace TungMovie
             username = UserStore.StoreUsername;
             txtUsername.Text = username;
             boxScheduleId_load(movie_id);
+            boxPaymentType.SelectedIndex = 0;
         }
 
         private void boxScheduleId_SelectedIndexChanged(object sender, EventArgs e)
@@ -128,11 +129,25 @@ namespace TungMovie
                 int price = Int32.Parse(txtPrice.Text);
                 int roomid = Int32.Parse(txtIdRoom.Text);
                 int ticketid = Int32.Parse(txtIdTicket.Text);
-                username = "user2";
-                //int price, DateTime booking_date, int schedule_id, string username, int seat_id, int room_id)
+                string type = boxPaymentType.SelectedItem.ToString();
+                int usernumber = Int32.Parse(txtUserNumber.Text);
+                string moviename = txtMovieName.Text;
+                PaymentStrategy.PaymentContext context = new PaymentStrategy.PaymentContext();
+                PaymentStrategy.MoMoPaymentStrategy momo = new PaymentStrategy.MoMoPaymentStrategy();
+                PaymentStrategy.ZaloPayPaymentStrategy zalo = new PaymentStrategy.ZaloPayPaymentStrategy();
+
+                if (type.Equals("MoMo"))
+                {
+                    context.SetPaymentStrategy(momo);
+                }
+                else
+                {
+                    context.SetPaymentStrategy(zalo);
+                }
+
                 if (ti.bookTicket(ticketid, price, bookingdatatime, scheduleid, username, seatid, roomid))
                 {
-                    MessageBox.Show("Book ticket Successful", "Book Ticket", MessageBoxButtons.OK);
+                    context.ExecutePayment(username, moviename, bookingdatatime, usernumber, price);
                 }
                 else
                 {
@@ -141,13 +156,14 @@ namespace TungMovie
             }
             else
             {
-                MessageBox.Show("Please select a seat", "Book Ticket", MessageBoxButtons.OK);
+                MessageBox.Show("No blanks allowed", "Book Ticket", MessageBoxButtons.OK);
             }
         }
 
         bool verif()
         {
             if ((txtIdTicket.Text.Trim() == "")
+                || (txtUserNumber.Text.Trim() == "")
                 || (boxIdSeat.SelectedIndex == -1))
             {
                 return false;
@@ -155,6 +171,19 @@ namespace TungMovie
             else
             {
                 return true;
+            }
+        }
+
+        private void boxPaymentType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string type = boxPaymentType.SelectedItem.ToString();
+            if (type.Equals("MoMo"))
+            {
+                lb_receiver.Text = "Receiver's MoMo";
+            }
+            else
+            {
+                lb_receiver.Text = "Receiver's ZaloPay";
             }
         }
     }
