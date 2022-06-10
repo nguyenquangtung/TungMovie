@@ -65,7 +65,7 @@ namespace TungMovie
 					new AdminManagement().Show();
 				else if (role == "MANAGER")
 					new ManagerForm().Show();
-
+				UserStore.StoreUsername = username;
 				this.Hide();
 			}
 			else

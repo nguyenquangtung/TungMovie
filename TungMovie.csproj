@@ -84,6 +84,7 @@
     <Compile Include="FormMenuCustomer.Designer.cs">
       <DependentUpon>FormMenuCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListMovie.cs" />
     <Compile Include="ListSuccessedTicket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,12 +161,13 @@
     <Compile Include="RoomManagement.Designer.cs">
       <DependentUpon>RoomManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChooseSchedule.cs">
+    <Compile Include="BuyTicket.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChooseSchedule.Designer.cs">
-      <DependentUpon>ChooseSchedule.cs</DependentUpon>
+    <Compile Include="BuyTicket.Designer.cs">
+      <DependentUpon>BuyTicket.cs</DependentUpon>
     </Compile>
+    <Compile Include="Schedule.cs" />
     <Compile Include="ScheduleManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,12 +181,6 @@
     <Compile Include="SeatManagement.Designer.cs">
       <DependentUpon>SeatManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="BuyTicket.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BuyTicket.Designer.cs">
-      <DependentUpon>BuyTicket.cs</DependentUpon>
-    </Compile>
     <Compile Include="StatiticsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,7 +188,6 @@
       <DependentUpon>StatiticsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Ticket.cs" />
-    <Compile Include="TicketInfo.cs" />
     <Compile Include="TicketManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +195,7 @@
       <DependentUpon>TicketManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="UserStore.cs" />
     <EmbeddedResource Include="AdminManagement.resx">
       <DependentUpon>AdminManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,17 +260,14 @@
     <EmbeddedResource Include="RoomManagement.resx">
       <DependentUpon>RoomManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChooseSchedule.resx">
-      <DependentUpon>ChooseSchedule.cs</DependentUpon>
+    <EmbeddedResource Include="BuyTicket.resx">
+      <DependentUpon>BuyTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ScheduleManagement.resx">
       <DependentUpon>ScheduleManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SeatManagement.resx">
       <DependentUpon>SeatManagement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BuyTicket.resx">
-      <DependentUpon>BuyTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StatiticsForm.resx">
       <DependentUpon>StatiticsForm.cs</DependentUpon>

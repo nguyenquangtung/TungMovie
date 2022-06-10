@@ -41,7 +41,7 @@ namespace TungMovie
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.labelTicketManagement = new System.Windows.Forms.Label();
-            this.txtIdStatistic = new System.Windows.Forms.TextBox();
+            this.txtIdRoom = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.gridTicketManagement = new System.Windows.Forms.DataGridView();
@@ -199,15 +199,15 @@ namespace TungMovie
             this.labelTicketManagement.TabIndex = 86;
             this.labelTicketManagement.Text = "Ticket Management";
             // 
-            // txtIdStatistic
+            // txtIdRoom
             // 
-            this.txtIdStatistic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtIdStatistic.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtIdStatistic.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtIdStatistic.Location = new System.Drawing.Point(156, 300);
-            this.txtIdStatistic.Name = "txtIdStatistic";
-            this.txtIdStatistic.Size = new System.Drawing.Size(70, 17);
-            this.txtIdStatistic.TabIndex = 109;
+            this.txtIdRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtIdRoom.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIdRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtIdRoom.Location = new System.Drawing.Point(156, 300);
+            this.txtIdRoom.Name = "txtIdRoom";
+            this.txtIdRoom.Size = new System.Drawing.Size(70, 17);
+            this.txtIdRoom.TabIndex = 109;
             // 
             // label6
             // 
@@ -215,9 +215,9 @@ namespace TungMovie
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(15, 300);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 16);
+            this.label6.Size = new System.Drawing.Size(61, 16);
             this.label6.TabIndex = 108;
-            this.label6.Text = "ID Statistic";
+            this.label6.Text = "ID Room";
             // 
             // label7
             // 
@@ -321,7 +321,7 @@ namespace TungMovie
             this.Controls.Add(this.boxUsername);
             this.Controls.Add(this.boxIdSchedule);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtIdStatistic);
+            this.Controls.Add(this.txtIdRoom);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnViewTicket);
             this.Controls.Add(this.btnUpdateTicket);
@@ -359,7 +359,7 @@ namespace TungMovie
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelTicketManagement;
-        private System.Windows.Forms.TextBox txtIdStatistic;
+        private System.Windows.Forms.TextBox txtIdRoom;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView gridTicketManagement;

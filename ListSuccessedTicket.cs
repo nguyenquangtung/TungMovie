@@ -16,17 +16,12 @@ namespace TungMovie
 		{
 			InitializeComponent();
 		}
-		DataTable dtTicket = null;
-		TicketInfo Tick = new TicketInfo();
+
+		Ticket Tick = new Ticket();
 
 		public void LoadDataGrid()
 		{
-			dtTicket = new DataTable();
-			dtTicket.Clear();
-
-			DataSet ds = Tick.getTicketInfo();
-			dtTicket = ds.Tables[0];
-			dataGridView1.DataSource = dtTicket;
+			dataGridView1.DataSource = Tick.getTicketList();
 			dataGridView1.AutoResizeColumns();
 		}
 
@@ -45,9 +40,6 @@ namespace TungMovie
 
 		private void btnClear_Click(object sender, EventArgs e)
 		{
-			dtTicket.Clear();
-
-			dataGridView1.DataSource = dtTicket;
 			txtId.Text = "";
 			txtPrice.Text = "";
 			txtBookingdate.Text = "";
@@ -67,7 +59,7 @@ namespace TungMovie
 			txtPrice.Text = dataGridView1.Rows[e.RowIndex].Cells["price"].Value.ToString();
 			txtScheduleid.Text = dataGridView1.Rows[e.RowIndex].Cells["schedule_id"].Value.ToString();
 			txtSeat.Text = dataGridView1.Rows[e.RowIndex].Cells["seat_id"].Value.ToString();
-			txtStatitics.Text = dataGridView1.Rows[e.RowIndex].Cells["statistics_id"].Value.ToString();
+			txtStatitics.Text = dataGridView1.Rows[e.RowIndex].Cells["room_id"].Value.ToString();
 		}
 
 		private void btnShow_Click(object sender, EventArgs e)
@@ -78,16 +70,16 @@ namespace TungMovie
 
 		private void btnPrint_Click_1(object sender, EventArgs e)
 		{
-			int id = Convert.ToInt32(txtId.Text.ToString());
-			SqlConnection conn = new SqlConnection(@"Data Source=PC;Initial Catalog=Movie_ticket_management;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"); //chuỗi kết nối
-			SqlCommand cmd = new SqlCommand("SELECT * FROM [dbo].[fu_Print_ticket] (" + id + ") ", conn);
+            //int id = Convert.ToInt32(txtId.Text.ToString());
+            //SqlConnection conn = new SqlConnection(@"Data Source=PC;Initial Catalog=Movie_ticket_management;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"); //chuỗi kết nối
+            //SqlCommand cmd = new SqlCommand("SELECT * FROM [dbo].[fu_Print_ticket] (" + id + ") ", conn);
 
-			//cmd.Parameters.AddWithValue("(@movieId", name);
-			SqlDataAdapter da = new SqlDataAdapter(cmd);
-			DataTable dt = new DataTable();
-			da.Fill(dt);
-			DataTable x = dt;
-			dataGridView1.DataSource = x;
-		}
+            //cmd.Parameters.AddWithValue("(@movieId", name);
+            //SqlDataAdapter da = new SqlDataAdapter(cmd);
+            //DataTable dt = new DataTable();
+            //da.Fill(dt);
+            //DataTable x = dt;
+            //dataGridView1.DataSource = x;
+        }
 	}
 }

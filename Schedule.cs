@@ -115,5 +115,15 @@ namespace TungMovie
                 return false;
             }
         }
+
+        public DataTable getScheduleListByMovieId(int movie_id)
+        {
+            SqlCommand cmd = new SqlCommand("select scheduleid, start_time, end_time, room_id from Schedule where movie_id = @movie_id", db.GetConnection);
+            cmd.Parameters.Add("@movie_id", SqlDbType.Int).Value = movie_id;
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
     }
 }

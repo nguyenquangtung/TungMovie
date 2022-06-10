@@ -55,5 +55,24 @@ namespace TungMovie
             }
         }
 
+        public DataTable getSeatListByRoomID(int roomid)
+        {
+            SqlCommand command = new SqlCommand("select seatid, kind from Seat where room_id = @roomid and status = 'False'", db.GetConnection);
+            command.Parameters.Add("@roomid", SqlDbType.Int).Value = roomid;
+            SqlDataAdapter sda = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
+
+        public DataTable getSeatKind(int seatid)
+        {
+            SqlCommand command = new SqlCommand("select kind from Seat where seatid = @seatid", db.GetConnection);
+            command.Parameters.Add("@seatid", SqlDbType.Int).Value = seatid;
+            SqlDataAdapter sda = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
     }
 }

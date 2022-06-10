@@ -101,7 +101,7 @@ namespace TungMovie
                 int roomid = Int32.Parse(txtIdRoom.Text.ToString());
                 if (sc.addSchedule(id, start, end, movieid, roomid))
                 {
-                    MessageBox.Show("UPdate Schedule Successful", "Schedule", MessageBoxButtons.OK);
+                    MessageBox.Show("Update Schedule Successful", "Schedule", MessageBoxButtons.OK);
                 }
                 else
                 {

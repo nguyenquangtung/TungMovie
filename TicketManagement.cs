@@ -93,7 +93,7 @@ namespace TungMovie
                 boxIdSchedule.Text = dt.Rows[0][2].ToString();
                 boxUsername.Text = dt.Rows[0][3].ToString();
                 boxIdSeat.Text = dt.Rows[0][4].ToString();
-                txtIdStatistic.Text = dt.Rows[0][5].ToString();
+                txtIdRoom.Text = dt.Rows[0][5].ToString();
             }
             catch
             {
@@ -102,7 +102,7 @@ namespace TungMovie
                 boxIdSchedule.SelectedIndex = -1;
                 boxUsername.SelectedIndex = -1;
                 boxIdSeat.SelectedIndex = -1;
-                txtIdStatistic.Text = "";
+                txtIdRoom.Text = "";
             }
         }
 
@@ -137,7 +137,7 @@ namespace TungMovie
                 boxIdSchedule.SelectedIndex = -1;
                 boxUsername.SelectedIndex = -1;
                 boxIdSeat.SelectedIndex = -1;
-                txtIdStatistic.Text = "";
+                txtIdRoom.Text = "";
                 if (ti.addTicket(price))
                 {
                     MessageBox.Show("Add Ticket Successful", "Ticket", MessageBoxButtons.OK);
@@ -163,8 +163,8 @@ namespace TungMovie
                 int scheduleid = Int32.Parse(boxIdSchedule.SelectedValue.ToString());
                 string username = boxUsername.SelectedValue.ToString();
                 int seatid = Int32.Parse(boxIdSeat.SelectedValue.ToString());
-                int statisticsid = Int32.Parse(txtIdStatistic.Text.ToString());
-                if (ti.updateTicket(id,price,bookingdate,scheduleid,username,seatid, statisticsid))
+                int roomid = Int32.Parse(txtIdRoom.Text.ToString());
+                if (ti.updateTicket(id,price,bookingdate,scheduleid,username,seatid, roomid))
                 {
                     MessageBox.Show("UPdate Ticket Successful", "Ticket", MessageBoxButtons.OK);
                 }
@@ -185,7 +185,7 @@ namespace TungMovie
                 || (boxIdSeat.SelectedIndex == -1)
                 || (boxIdSchedule.SelectedIndex == -1)
                 || (boxUsername.SelectedIndex == -1)
-                || (txtIdStatistic.Text.Trim() == ""))
+                || (txtIdRoom.Text.Trim() == ""))
             {
                 return false;
             }
