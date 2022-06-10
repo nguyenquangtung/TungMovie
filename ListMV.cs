@@ -68,10 +68,10 @@ namespace TungMovie
 		if (comboBox1.Text == "find by id")
 		{
 			if(txtSearch.Text == string.Empty)
-                {
-			ListMV_grid_Load();
-			return;
-                }
+                	{
+				ListMV_grid_Load();
+				return;
+                	}
 			int id = Convert.ToInt32(txtSearch.Text.ToString());
 			SqlConnection conn = new SqlConnection(@"Data Source=MSI;Initial Catalog=Movie_ticket_management;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"); //chuỗi kết nối
 			SqlCommand cmd = new SqlCommand("SELECT movieid 'ID',name 'Movie',thumbnail 'Image', rating 'Rating', genre 'Genre', short_description 'Desciption', duration 'Duration', trailer 'Trailer' FROM Movie WHERE movieid LIKE '%" + id + "%' ", conn);
@@ -95,5 +95,9 @@ namespace TungMovie
 			gridListMV.DataSource = x;
 		}
         }
+	private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+			txtSearch.Enabled = true;
+	}
     }
 }
