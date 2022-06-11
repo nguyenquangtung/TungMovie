@@ -47,7 +47,11 @@ namespace TungMovie
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_Schedule = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.moviepic = new System.Windows.Forms.PictureBox();
+            this.btnUpload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridFilmManagement)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moviepic)).BeginInit();
             this.SuspendLayout();
             // 
             // gridFilmManagement
@@ -55,14 +59,15 @@ namespace TungMovie
             this.gridFilmManagement.AllowUserToAddRows = false;
             this.gridFilmManagement.AllowUserToDeleteRows = false;
             this.gridFilmManagement.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridFilmManagement.BackgroundColor = System.Drawing.Color.White;
             this.gridFilmManagement.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridFilmManagement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridFilmManagement.Location = new System.Drawing.Point(377, 52);
+            this.gridFilmManagement.Location = new System.Drawing.Point(375, 24);
             this.gridFilmManagement.Name = "gridFilmManagement";
             this.gridFilmManagement.ReadOnly = true;
             this.gridFilmManagement.RowHeadersVisible = false;
             this.gridFilmManagement.RowHeadersWidth = 51;
-            this.gridFilmManagement.Size = new System.Drawing.Size(696, 490);
+            this.gridFilmManagement.Size = new System.Drawing.Size(696, 609);
             this.gridFilmManagement.TabIndex = 1;
             this.gridFilmManagement.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridFilmManagement_CellContentClick);
             // 
@@ -82,16 +87,16 @@ namespace TungMovie
             this.textRating.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.textRating.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.textRating.Location = new System.Drawing.Point(160, 211);
+            this.textRating.Location = new System.Drawing.Point(121, 158);
             this.textRating.Name = "textRating";
-            this.textRating.Size = new System.Drawing.Size(70, 15);
+            this.textRating.Size = new System.Drawing.Size(109, 15);
             this.textRating.TabIndex = 66;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 211);
+            this.label4.Location = new System.Drawing.Point(19, 158);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 16);
             this.label4.TabIndex = 65;
@@ -102,17 +107,17 @@ namespace TungMovie
             this.txtDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.txtDescription.Location = new System.Drawing.Point(160, 285);
+            this.txtDescription.Location = new System.Drawing.Point(121, 232);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(188, 60);
+            this.txtDescription.Size = new System.Drawing.Size(227, 60);
             this.txtDescription.TabIndex = 64;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 247);
+            this.label3.Location = new System.Drawing.Point(19, 194);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 16);
             this.label3.TabIndex = 63;
@@ -123,16 +128,16 @@ namespace TungMovie
             this.txtGenre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtGenre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.txtGenre.Location = new System.Drawing.Point(160, 247);
+            this.txtGenre.Location = new System.Drawing.Point(121, 194);
             this.txtGenre.Name = "txtGenre";
-            this.txtGenre.Size = new System.Drawing.Size(188, 15);
+            this.txtGenre.Size = new System.Drawing.Size(109, 15);
             this.txtGenre.TabIndex = 62;
             // 
             // labelIdFilm
             // 
             this.labelIdFilm.AutoSize = true;
             this.labelIdFilm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIdFilm.Location = new System.Drawing.Point(19, 122);
+            this.labelIdFilm.Location = new System.Drawing.Point(19, 88);
             this.labelIdFilm.Name = "labelIdFilm";
             this.labelIdFilm.Size = new System.Drawing.Size(49, 16);
             this.labelIdFilm.TabIndex = 61;
@@ -143,17 +148,17 @@ namespace TungMovie
             this.textFilmName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.textFilmName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textFilmName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.textFilmName.Location = new System.Drawing.Point(160, 159);
+            this.textFilmName.Location = new System.Drawing.Point(121, 126);
             this.textFilmName.Multiline = true;
             this.textFilmName.Name = "textFilmName";
-            this.textFilmName.Size = new System.Drawing.Size(188, 31);
+            this.textFilmName.Size = new System.Drawing.Size(189, 15);
             this.textFilmName.TabIndex = 60;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 159);
+            this.label1.Location = new System.Drawing.Point(19, 125);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 16);
             this.label1.TabIndex = 59;
@@ -169,16 +174,17 @@ namespace TungMovie
             this.boxFilmId.Items.AddRange(new object[] {
             "find by id",
             "find by name"});
-            this.boxFilmId.Location = new System.Drawing.Point(160, 122);
+            this.boxFilmId.Location = new System.Drawing.Point(121, 88);
             this.boxFilmId.Name = "boxFilmId";
-            this.boxFilmId.Size = new System.Drawing.Size(70, 24);
+            this.boxFilmId.Size = new System.Drawing.Size(109, 24);
             this.boxFilmId.TabIndex = 67;
+            this.boxFilmId.SelectedIndexChanged += new System.EventHandler(this.boxFilmId_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 361);
+            this.label5.Location = new System.Drawing.Point(19, 311);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 16);
             this.label5.TabIndex = 73;
@@ -188,20 +194,20 @@ namespace TungMovie
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 286);
+            this.label6.Location = new System.Drawing.Point(19, 233);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 16);
+            this.label6.Size = new System.Drawing.Size(76, 16);
             this.label6.TabIndex = 74;
-            this.label6.Text = "Short decription";
+            this.label6.Text = "Description";
             // 
             // txtDuration
             // 
             this.txtDuration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtDuration.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.txtDuration.Location = new System.Drawing.Point(160, 362);
+            this.txtDuration.Location = new System.Drawing.Point(121, 312);
             this.txtDuration.Name = "txtDuration";
-            this.txtDuration.Size = new System.Drawing.Size(70, 15);
+            this.txtDuration.Size = new System.Drawing.Size(109, 15);
             this.txtDuration.TabIndex = 76;
             // 
             // btn_add
@@ -211,7 +217,7 @@ namespace TungMovie
             this.btn_add.FlatAppearance.BorderSize = 0;
             this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_add.ForeColor = System.Drawing.Color.White;
-            this.btn_add.Location = new System.Drawing.Point(18, 444);
+            this.btn_add.Location = new System.Drawing.Point(18, 540);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(100, 40);
             this.btn_add.TabIndex = 82;
@@ -226,7 +232,7 @@ namespace TungMovie
             this.btn_delete.FlatAppearance.BorderSize = 0;
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.ForeColor = System.Drawing.Color.White;
-            this.btn_delete.Location = new System.Drawing.Point(244, 444);
+            this.btn_delete.Location = new System.Drawing.Point(244, 599);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(100, 40);
             this.btn_delete.TabIndex = 83;
@@ -241,7 +247,7 @@ namespace TungMovie
             this.btn_update.FlatAppearance.BorderSize = 0;
             this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_update.ForeColor = System.Drawing.Color.White;
-            this.btn_update.Location = new System.Drawing.Point(130, 444);
+            this.btn_update.Location = new System.Drawing.Point(130, 540);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(100, 40);
             this.btn_update.TabIndex = 84;
@@ -256,20 +262,54 @@ namespace TungMovie
             this.btn_Schedule.FlatAppearance.BorderSize = 0;
             this.btn_Schedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Schedule.ForeColor = System.Drawing.Color.White;
-            this.btn_Schedule.Location = new System.Drawing.Point(18, 502);
+            this.btn_Schedule.Location = new System.Drawing.Point(18, 599);
             this.btn_Schedule.Name = "btn_Schedule";
-            this.btn_Schedule.Size = new System.Drawing.Size(153, 40);
+            this.btn_Schedule.Size = new System.Drawing.Size(212, 40);
             this.btn_Schedule.TabIndex = 85;
             this.btn_Schedule.Text = "SCHEDULE MANAGEMENT";
             this.btn_Schedule.UseVisualStyleBackColor = false;
             this.btn_Schedule.Click += new System.EventHandler(this.btn_Schedule_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(22, 346);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 16);
+            this.label2.TabIndex = 86;
+            this.label2.Text = "Image";
+            // 
+            // moviepic
+            // 
+            this.moviepic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.moviepic.Location = new System.Drawing.Point(121, 346);
+            this.moviepic.Name = "moviepic";
+            this.moviepic.Size = new System.Drawing.Size(189, 160);
+            this.moviepic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.moviepic.TabIndex = 87;
+            this.moviepic.TabStop = false;
+            // 
+            // btnUpload
+            // 
+            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpload.Location = new System.Drawing.Point(235, 507);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(75, 23);
+            this.btnUpload.TabIndex = 88;
+            this.btnUpload.Text = "Upload";
+            this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // Film_management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1083, 561);
+            this.ClientSize = new System.Drawing.Size(1083, 651);
+            this.Controls.Add(this.btnUpload);
+            this.Controls.Add(this.moviepic);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_Schedule);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_delete);
@@ -292,6 +332,7 @@ namespace TungMovie
             this.Text = "Film_management";
             this.Load += new System.EventHandler(this.Film_management_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridFilmManagement)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moviepic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,5 +358,8 @@ namespace TungMovie
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_Schedule;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox moviepic;
+        private System.Windows.Forms.Button btnUpload;
     }
 }

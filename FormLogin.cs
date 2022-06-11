@@ -73,5 +73,22 @@ namespace TungMovie
 				MessageBox.Show("Check username or password", "Login", MessageBoxButtons.OK);
 			}
 		}
-	}
+
+
+        private void txtUsename_KeyDown(object sender, KeyEventArgs e)
+        {
+			if (e.KeyCode == Keys.Enter)
+			{
+				txtPassword.Focus();
+			}
+		}
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+			if (e.KeyCode == Keys.Enter)
+			{
+				btnLogin_Click(sender, e);
+			}
+		}
+    }
 }

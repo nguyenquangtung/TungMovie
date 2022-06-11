@@ -38,15 +38,15 @@ namespace TungMovie
 		}
 		private void ListMV_Load(object sender, EventArgs e)
 		{
-			ListMV_grid_Load();			
+			ListMV_grid_Load();
+			comboBox1.SelectedIndex = 0;
 		}
-
 
         	private void txtSearch_TextChanged(object sender, EventArgs e)
         	{
 			if (comboBox1.Text == "find by id")
 			{
-				if(txtSearch.Text == string.Empty)
+				if (txtSearch.Text == string.Empty)
 				{
 					ListMV_grid_Load();
 					return;
@@ -59,7 +59,12 @@ namespace TungMovie
 				string name = txtSearch.Text.ToString();
 				gridListMV.DataSource = listMovie.GetMovieByName(name);
 			}
-        	}
+			//else
+   //         {
+			//	gridListMV.DataSource = listMovie.getmovielist();
+			//	txtSearch.ReadOnly = true;
+			//}
+        }
 
         private void gridListMV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -83,5 +88,21 @@ namespace TungMovie
 				MessageBox.Show("Please select a movie name", "List Movie", MessageBoxButtons.OK);
 			}
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+			if (comboBox1.Text == "find by id")
+			{
+				txtSearch.ReadOnly = false;
+			}
+			else if (comboBox1.Text == "find by name")
+			{
+				txtSearch.ReadOnly = false;
+			}
+			else
+			{
+				txtSearch.ReadOnly = true;
+			}
+		}
     }
 }

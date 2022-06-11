@@ -19,7 +19,7 @@ namespace TungMovie
 
         private void btnAccountManagement_Click(object sender, EventArgs e)
         {
-            new UserManagement().Show();
+            new EditInfo().Show();
         }
 
         private void btnScheduleManagement_Click(object sender, EventArgs e)

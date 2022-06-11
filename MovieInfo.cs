@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace TungMovie
 {
@@ -15,38 +16,34 @@ namespace TungMovie
 
         public DataTable getmovielist()
         {
-            SqlCommand command = new SqlCommand("select movieid  'ID',name 'Movie',thumbnail 'Image', rating 'Rating', genre 'Genre', short_description 'Desciption', duration 'Duration' from [Movie]", db.GetConnection);
+            SqlCommand command = new SqlCommand("select movieid  'ID',name 'Movie',thumbnail 'Thumbnail', rating 'Rating', genre 'Genre', short_description 'Desciption', duration 'Duration' from [Movie]", db.GetConnection);
             SqlDataAdapter sda = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             return dt;
         }
 
-        public DataSet getMovieList()
+        public DataSet addMovie(string MovieN, string rating, string genre, string description, string duration, MemoryStream thumbnail)
         {
-            SqlCommand command = new SqlCommand("SELECT movieid  'ID',name 'Movie', rating 'Rating', genre 'Genre', short_description 'Desciption', duration 'Duration', start_time 'Start_date', end_time 'End_Date' " +
-                                                 "FROM[Movie_ticket_management].[dbo].[Movie] inner join[Movie_ticket_management].[dbo].[Schedule] on[Movie].movieid = [Schedule].movie_id ", db.GetConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO [Movie_ticket_management].[dbo].[Movie] (name, rating, genre, short_description , duration, thumbnail )" +
+                                                 "VALUES ('" + MovieN + "', '" + rating + "', '" + genre + "', ' " + description + "', '" + duration + "', '" + thumbnail.ToArray() + "');", db.GetConnection);
             SqlDataAdapter sda = new SqlDataAdapter(command);
             DataSet dt = new DataSet();
             sda.Fill(dt);
             return dt;
         }
 
-        public DataSet addMovie(string MovieN, string rating, string genre, string description, string duration)
+        public DataSet updateMovie(string name, string rating, string genre, string short_description, string duration, string movieid, MemoryStream thumbnail)
         {
-            SqlCommand command = new SqlCommand("INSERT INTO [Movie_ticket_management].[dbo].[Movie] (name, rating, genre, short_description , duration )" +
-                                                 "VALUES ('" + MovieN + "', '" + rating + "', '" + genre + "', ' " + description + "', '" + duration + "');", db.GetConnection);
-            SqlDataAdapter sda = new SqlDataAdapter(command);
-            DataSet dt = new DataSet();
-            sda.Fill(dt);
-            return dt;
-        }
-
-        public DataSet updateMovie(string MovieN, string rating, string genre, string description, string duration, string movieid)
-        {
-            SqlCommand command = new SqlCommand("UPDATE [Movie_ticket_management].[dbo].[Movie] " +
-                                                "SET name = '" + MovieN + "', rating = '" + rating + "', genre = '" + genre + "', short_description = '" + description + "', duration = '" + duration + "' " +
-                                                "WHERE movieid = '" + movieid + "'; ", db.GetConnection);
+            SqlCommand command = new SqlCommand("UPDATE [Movie] SET name = @name, rating = @rating, genre = @genre, short_description = @short_description " +
+                ", duration = @duration, thumbnail = @thumbnail WHERE movieid = @movieid", db.GetConnection);
+            command.Parameters.Add("@movieid", SqlDbType.Int).Value = movieid;
+            command.Parameters.Add("@name", SqlDbType.VarChar).Value = name;
+            command.Parameters.Add("@rating", SqlDbType.Int).Value = rating;
+            command.Parameters.Add("@genre", SqlDbType.VarChar).Value = genre;
+            command.Parameters.Add("@short_description", SqlDbType.VarChar).Value = short_description;
+            command.Parameters.Add("@duration", SqlDbType.Int).Value = duration;
+            command.Parameters.Add("@thumbnail", SqlDbType.Image).Value = thumbnail.ToArray();
             SqlDataAdapter sda = new SqlDataAdapter(command);
             DataSet dt = new DataSet();
             sda.Fill(dt);
