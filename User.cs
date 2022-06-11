@@ -75,19 +75,20 @@ namespace TungMovie
 
         public bool updateUserInfo(string username, string password, string fullname, string address, int phone, DateTime birthday, string email)
         {
-            SqlCommand command = new SqlCommand("update Room set password = @password, fullname = @fullname, address = @address" +
+            SqlCommand command = new SqlCommand("update [User] set password = @password, fullname = @fullname, address = @address" +
                 " , phone = @phone, birthday = @birthday, email = @email where username = @username", db.GetConnection);
             command.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
             command.Parameters.Add("@password", SqlDbType.VarChar).Value = password;
             command.Parameters.Add("@fullname", SqlDbType.VarChar).Value = fullname;
             command.Parameters.Add("@address", SqlDbType.VarChar).Value = address;
             command.Parameters.Add("@phone", SqlDbType.Int).Value = phone;
-            command.Parameters.Add("@birthday", SqlDbType.Date).Value = birthday;
+            command.Parameters.Add("@birthday", SqlDbType.DateTime).Value = birthday;
             command.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
             SqlDataAdapter sda = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            if (dt.Rows.Count > 0)
+            db.openConnection();
+            if ((command.ExecuteNonQuery() == 1))
             {
                 db.closeConnection();
                 return true;
@@ -97,6 +98,16 @@ namespace TungMovie
                 db.closeConnection();
                 return false;
             }
+        }
+
+        public DataTable getUserInfoByName(string username)
+        {
+            SqlCommand command = new SqlCommand("select password, fullname, address, phone, birthday, email from [User] where username = @username", db.GetConnection);
+            command.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
+            SqlDataAdapter sda = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
         }
     }
 }

@@ -19,6 +19,7 @@ namespace TungMovie
             InitializeComponent();
         }
 
+
         private void btn_UpdateAccount_Click(object sender, EventArgs e)
         {
             if(verif())
@@ -64,6 +65,30 @@ namespace TungMovie
             else
             {
                 return true;
+            }
+        }
+
+        private void EditInfo_Load(object sender, EventArgs e)
+        {
+            userinfoLoad();
+        }
+
+        private void userinfoLoad()
+        {
+            txtUsername.Text = UserStore.StoreUsername;
+            DataTable dt = us.getUserInfoByName(UserStore.StoreUsername);
+            try
+            {
+                txtPassword.Text = dt.Rows[0][0].ToString();
+                txtFullname.Text = dt.Rows[0][1].ToString();
+                txtAddress.Text = dt.Rows[0][2].ToString();
+                txtPhone.Text = dt.Rows[0][3].ToString();
+                dateBirthday.Value = DateTime.Parse(dt.Rows[0][4].ToString());
+                txtEmail.Text = dt.Rows[0][5].ToString();
+            }
+            catch
+            {
+
             }
         }
     }

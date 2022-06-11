@@ -53,7 +53,7 @@ namespace TungMovie
             this.dateBirthday.CustomFormat = "dd/MM/yyyy";
             this.dateBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
             this.dateBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateBirthday.Location = new System.Drawing.Point(195, 264);
+            this.dateBirthday.Location = new System.Drawing.Point(202, 278);
             this.dateBirthday.MaxDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             this.dateBirthday.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
             this.dateBirthday.Name = "dateBirthday";
@@ -66,7 +66,7 @@ namespace TungMovie
             this.txtFullname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtFullname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFullname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.txtFullname.Location = new System.Drawing.Point(195, 162);
+            this.txtFullname.Location = new System.Drawing.Point(202, 176);
             this.txtFullname.Multiline = true;
             this.txtFullname.Name = "txtFullname";
             this.txtFullname.Size = new System.Drawing.Size(188, 16);
@@ -77,7 +77,7 @@ namespace TungMovie
             this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.txtUsername.Location = new System.Drawing.Point(195, 91);
+            this.txtUsername.Location = new System.Drawing.Point(202, 105);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.ReadOnly = true;
@@ -88,7 +88,7 @@ namespace TungMovie
             // 
             this.lb_Birthday.AutoSize = true;
             this.lb_Birthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Birthday.Location = new System.Drawing.Point(62, 264);
+            this.lb_Birthday.Location = new System.Drawing.Point(69, 278);
             this.lb_Birthday.Name = "lb_Birthday";
             this.lb_Birthday.Size = new System.Drawing.Size(59, 16);
             this.lb_Birthday.TabIndex = 187;
@@ -99,7 +99,7 @@ namespace TungMovie
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.txtEmail.Location = new System.Drawing.Point(195, 299);
+            this.txtEmail.Location = new System.Drawing.Point(202, 313);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(183, 15);
             this.txtEmail.TabIndex = 186;
@@ -108,7 +108,7 @@ namespace TungMovie
             // 
             this.lb_Email.AutoSize = true;
             this.lb_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Email.Location = new System.Drawing.Point(62, 298);
+            this.lb_Email.Location = new System.Drawing.Point(69, 312);
             this.lb_Email.Name = "lb_Email";
             this.lb_Email.Size = new System.Drawing.Size(42, 16);
             this.lb_Email.TabIndex = 185;
@@ -121,9 +121,9 @@ namespace TungMovie
             this.btn_UpdateAccount.FlatAppearance.BorderSize = 0;
             this.btn_UpdateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_UpdateAccount.ForeColor = System.Drawing.Color.White;
-            this.btn_UpdateAccount.Location = new System.Drawing.Point(65, 356);
+            this.btn_UpdateAccount.Location = new System.Drawing.Point(72, 370);
             this.btn_UpdateAccount.Name = "btn_UpdateAccount";
-            this.btn_UpdateAccount.Size = new System.Drawing.Size(100, 40);
+            this.btn_UpdateAccount.Size = new System.Drawing.Size(136, 40);
             this.btn_UpdateAccount.TabIndex = 184;
             this.btn_UpdateAccount.Text = "UPDATE ACCOUNT";
             this.btn_UpdateAccount.UseVisualStyleBackColor = false;
@@ -136,9 +136,9 @@ namespace TungMovie
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(278, 356);
+            this.button1.Location = new System.Drawing.Point(256, 370);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 40);
+            this.button1.Size = new System.Drawing.Size(129, 40);
             this.button1.TabIndex = 183;
             this.button1.Text = "RETURN";
             this.button1.UseVisualStyleBackColor = false;
@@ -148,7 +148,7 @@ namespace TungMovie
             // 
             this.lb_Fullname.AutoSize = true;
             this.lb_Fullname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Fullname.Location = new System.Drawing.Point(62, 162);
+            this.lb_Fullname.Location = new System.Drawing.Point(69, 176);
             this.lb_Fullname.Name = "lb_Fullname";
             this.lb_Fullname.Size = new System.Drawing.Size(63, 16);
             this.lb_Fullname.TabIndex = 182;
@@ -159,7 +159,7 @@ namespace TungMovie
             this.txtPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.txtPhone.Location = new System.Drawing.Point(195, 231);
+            this.txtPhone.Location = new System.Drawing.Point(202, 245);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(100, 15);
             this.txtPhone.TabIndex = 181;
@@ -168,7 +168,7 @@ namespace TungMovie
             // 
             this.lb_Phone.AutoSize = true;
             this.lb_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Phone.Location = new System.Drawing.Point(62, 231);
+            this.lb_Phone.Location = new System.Drawing.Point(69, 245);
             this.lb_Phone.Name = "lb_Phone";
             this.lb_Phone.Size = new System.Drawing.Size(47, 16);
             this.lb_Phone.TabIndex = 180;
@@ -178,7 +178,7 @@ namespace TungMovie
             // 
             this.lb_Address.AutoSize = true;
             this.lb_Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Address.Location = new System.Drawing.Point(62, 199);
+            this.lb_Address.Location = new System.Drawing.Point(69, 213);
             this.lb_Address.Name = "lb_Address";
             this.lb_Address.Size = new System.Drawing.Size(59, 16);
             this.lb_Address.TabIndex = 179;
@@ -189,7 +189,7 @@ namespace TungMovie
             this.txtAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.txtAddress.Location = new System.Drawing.Point(195, 199);
+            this.txtAddress.Location = new System.Drawing.Point(202, 213);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(188, 15);
             this.txtAddress.TabIndex = 178;
@@ -198,7 +198,7 @@ namespace TungMovie
             // 
             this.lb_Username.AutoSize = true;
             this.lb_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Username.Location = new System.Drawing.Point(62, 91);
+            this.lb_Username.Location = new System.Drawing.Point(69, 105);
             this.lb_Username.Name = "lb_Username";
             this.lb_Username.Size = new System.Drawing.Size(71, 16);
             this.lb_Username.TabIndex = 177;
@@ -209,7 +209,7 @@ namespace TungMovie
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.txtPassword.Location = new System.Drawing.Point(195, 129);
+            this.txtPassword.Location = new System.Drawing.Point(202, 143);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(188, 16);
@@ -219,7 +219,7 @@ namespace TungMovie
             // 
             this.lb_Password.AutoSize = true;
             this.lb_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Password.Location = new System.Drawing.Point(62, 129);
+            this.lb_Password.Location = new System.Drawing.Point(69, 143);
             this.lb_Password.Name = "lb_Password";
             this.lb_Password.Size = new System.Drawing.Size(68, 16);
             this.lb_Password.TabIndex = 175;
@@ -262,6 +262,7 @@ namespace TungMovie
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditInfo";
             this.Text = "EmployeeManagermentAccount";
+            this.Load += new System.EventHandler(this.EditInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
