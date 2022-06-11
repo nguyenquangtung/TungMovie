@@ -22,50 +22,19 @@ namespace TungMovie
 
        
 
+        private void button2_Click_1(object sender, EventArgs e)
+        {
 
-		private void btnCustomManager_Click(object sender, EventArgs e)
-		{
-            new UserManagement().Show();
-		}
+        }
 
-		private void btnScheduleManagerment_Click(object sender, EventArgs e)
-		{
-            new ScheduleManagement().Show();
-		}
+        private void button4_Click_1(object sender, EventArgs e)
+        {
 
-		private void btnRoomManagerment_Click(object sender, EventArgs e)
-		{
-			new RoomManagement().Show();
-		}
+        }
 
-		private void btnTicketManagerment_Click(object sender, EventArgs e)
-		{
-			new TicketManagement().Show();
-		}
+        private void button1_Click_1(object sender, EventArgs e)
+        {
 
-		private void btnMovieManagerment_Click(object sender, EventArgs e)
-		{
-			new Film_management().Show();
-		}
-
-		private void btnSeatManagerment_Click(object sender, EventArgs e)
-		{
-			new SeatManagement().Show();
-		}
-
-		private void btnStatitics_Click(object sender, EventArgs e)
-		{
-			new StatiticsForm().Show();
-		}
-
-		private void btnCharacter_Click(object sender, EventArgs e)
-		{
-			new ListCharater().Show();
-		}
-
-		private void btnFilming_Click(object sender, EventArgs e)
-		{
-			new ListMV().Show();
-		}
-	}
+        }
+    }
 }

@@ -15,6 +15,7 @@ namespace TungMovie
 
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
+
         public bool login(string username, string password)
         {
             SqlCommand command = new SqlCommand("SELECT username, password FROM [User] WHERE username = @username and password = @password", db.GetConnection);
@@ -56,28 +57,6 @@ namespace TungMovie
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
-
-
-            /* SqlCommand command = new SqlCommand("INSERT INTO [User] (username, password,fullname ,address, phone, birthday, email)" +
-                 "VALUES (@username, @password, @fullname,@address,@phone,@birthday,@email)", db.GetConnection);
-             command.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
-             command.Parameters.Add("@password", SqlDbType.VarChar).Value = password;
-             command.Parameters.Add("@fullname", SqlDbType.VarChar).Value = fullname;
-             command.Parameters.Add("@address", SqlDbType.VarChar).Value = address;
-             command.Parameters.Add("@phone", SqlDbType.VarChar).Value = phonenumber;
-             command.Parameters.Add("@birthday", SqlDbType.Date).Value = year;
-             command.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
-             db.openConnection();
-             if ((command.ExecuteNonQuery() == 1))
-             {
-                 db.closeConnection();
-                 return true;
-             }
-             else
-             {
-                 db.closeConnection();
-                 return false;
-             }*/
         }
 
         public string getrole(string username)
@@ -93,5 +72,42 @@ namespace TungMovie
             }
             return rolename;
         }
-    } 
+
+        public bool updateUserInfo(string username, string password, string fullname, string address, int phone, DateTime birthday, string email)
+        {
+            SqlCommand command = new SqlCommand("update [User] set password = @password, fullname = @fullname, address = @address" +
+                " , phone = @phone, birthday = @birthday, email = @email where username = @username", db.GetConnection);
+            command.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
+            command.Parameters.Add("@password", SqlDbType.VarChar).Value = password;
+            command.Parameters.Add("@fullname", SqlDbType.VarChar).Value = fullname;
+            command.Parameters.Add("@address", SqlDbType.VarChar).Value = address;
+            command.Parameters.Add("@phone", SqlDbType.Int).Value = phone;
+            command.Parameters.Add("@birthday", SqlDbType.DateTime).Value = birthday;
+            command.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
+            SqlDataAdapter sda = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            db.openConnection();
+            if ((command.ExecuteNonQuery() == 1))
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
+
+        public DataTable getUserInfoByName(string username)
+        {
+            SqlCommand command = new SqlCommand("select password, fullname, address, phone, birthday, email from [User] where username = @username", db.GetConnection);
+            command.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
+            SqlDataAdapter sda = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
+    }
 }
