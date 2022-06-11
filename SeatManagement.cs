@@ -140,5 +140,10 @@ namespace TungMovie
                 MessageBox.Show("Blank is not allowed", "Seat", MessageBoxButtons.OK);
             }
         }
-    }
+
+		private void gridSeatManagement_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
+	}
 }

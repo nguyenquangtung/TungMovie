@@ -20,7 +20,7 @@ namespace TungMovie
 
         public DataTable getTicketListByUsername(string username)
         {
-            SqlCommand cmd = new SqlCommand("Select ticketid, price, booking_date, schedule_id, seat_id, room_id  from Ticket where username = @username", db.GetConnection);
+            SqlCommand cmd = new SqlCommand("Select ticketid, price, booking_date, schedule_id, seat_id, room_id  from [Ticket] where username = @username", db.GetConnection);
             cmd.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
