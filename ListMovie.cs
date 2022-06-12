@@ -33,7 +33,7 @@ namespace TungMovie
 
         public DataTable getmovielist()
         {
-            SqlCommand command = new SqlCommand("select movieid  'ID',name 'Movie',thumbnail 'Image', rating 'Rating', genre 'Genre', short_description 'Desciption', duration 'Duration' from [Movie]", db.GetConnection);
+            SqlCommand command = new SqlCommand("select movieid  'ID',name 'Movie',thumbnail 'Thumbnail', rating 'Rating', genre 'Genre', short_description 'Desciption', duration 'Duration' from [Movie]", db.GetConnection);
             SqlDataAdapter sda = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -41,7 +41,7 @@ namespace TungMovie
         }
         public DataTable GetMovieById(int id)
         {
-            SqlCommand cmd = new SqlCommand("SELECT movieid 'ID',name 'Movie',thumbnail 'Image', rating 'Rating', genre 'Genre', short_description 'Desciption', duration 'Duration' FROM Movie WHERE movieid LIKE '%" + id + "%' ", db.GetConnection);
+            SqlCommand cmd = new SqlCommand("SELECT movieid 'ID',name 'Movie',thumbnail 'Thumbnail', rating 'Rating', genre 'Genre', short_description 'Desciption', duration 'Duration' FROM Movie WHERE movieid LIKE '%" + id + "%' ", db.GetConnection);
             cmd.Parameters.AddWithValue("@movieid", id);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -50,7 +50,7 @@ namespace TungMovie
         }
         public DataTable GetMovieByName(string name)
         {
-            SqlCommand cmd = new SqlCommand("SELECT movieid 'ID',name 'Movie',thumbnail 'Image', rating 'Rating', genre 'Genre', short_description 'Desciption', duration 'Duration' FROM Movie WHERE name LIKE '%" + name + "%' ", db.GetConnection);
+            SqlCommand cmd = new SqlCommand("SELECT movieid 'ID',name 'Movie',thumbnail 'Thumbnail', rating 'Rating', genre 'Genre', short_description 'Desciption', duration 'Duration' FROM Movie WHERE name LIKE '%" + name + "%' ", db.GetConnection);
             cmd.Parameters.AddWithValue("@name", name);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();

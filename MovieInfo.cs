@@ -59,13 +59,22 @@ namespace TungMovie
             return dt;
         }
 
-        public DataSet getticket()
+        public bool insertMovieStatistics(string movie)
         {
-            SqlCommand command = new SqlCommand(" select movieid  'ID',name 'Movie',thumbnail 'Image', rating 'Rating', genre 'Genre', short_description 'Desciption', duration 'Duration' from[Movie]", db.GetConnection);
-            SqlDataAdapter sda = new SqlDataAdapter(command);
-            DataSet dt = new DataSet();
-            sda.Fill(dt);
-            return dt;
+            SqlCommand command = new SqlCommand("UPDATE [Statistics] (movie) Values (@movie)", db.GetConnection);
+            command.Parameters.Add("@seatid", SqlDbType.VarChar).Value = movie;
+            db.openConnection();
+
+            if ((command.ExecuteNonQuery() == 1))
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
         }
     }
 }

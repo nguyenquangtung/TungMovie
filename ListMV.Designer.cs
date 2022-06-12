@@ -86,7 +86,7 @@ namespace TungMovie
             this.gridListMV.ReadOnly = true;
             this.gridListMV.RowHeadersVisible = false;
             this.gridListMV.RowHeadersWidth = 51;
-            this.gridListMV.Size = new System.Drawing.Size(776, 341);
+            this.gridListMV.Size = new System.Drawing.Size(810, 402);
             this.gridListMV.TabIndex = 0;
             this.gridListMV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridListMV_CellContentClick);
             // 
@@ -97,7 +97,7 @@ namespace TungMovie
             this.btnDetail.FlatAppearance.BorderSize = 0;
             this.btnDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetail.ForeColor = System.Drawing.Color.White;
-            this.btnDetail.Location = new System.Drawing.Point(665, 54);
+            this.btnDetail.Location = new System.Drawing.Point(699, 54);
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.Size = new System.Drawing.Size(123, 22);
             this.btnDetail.TabIndex = 137;
@@ -109,7 +109,7 @@ namespace TungMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(834, 511);
             this.Controls.Add(this.btnDetail);
             this.Controls.Add(this.labelRegister);
             this.Controls.Add(this.comboBox1);

@@ -150,8 +150,9 @@ namespace TungMovie
                     context.SetPaymentStrategy(viettel);
                 }
 
-                if (ti.bookTicket(ticketid, price, bookingdatatime, scheduleid, username, seatid, roomid))
+                if (ti.bookTicket(ticketid, price, bookingdatatime, scheduleid, username, seatid, roomid, movie_id) && se.bookSeat(seatid))
                 {
+                    boxIdSeat_load(roomid);
                     context.ExecutePayment(username, moviename, bookingdatatime, usernumber, price);
                 }
                 else

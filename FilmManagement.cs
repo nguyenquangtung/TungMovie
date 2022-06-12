@@ -23,6 +23,8 @@ namespace TungMovie
 
         public void LoadDataGrid()
         {
+            gridFilmManagement.RowTemplate.Height = 150;
+            gridFilmManagement.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             gridFilmManagement.DataSource = Mi.getmovielist();
             gridFilmManagement.Columns[0].Width = 20;
             gridFilmManagement.Columns[1].Width = 70;
@@ -38,8 +40,6 @@ namespace TungMovie
 
         private void Film_management_Load(object sender, EventArgs e)
         {
-            gridFilmManagement.RowTemplate.Height = 150;
-            gridFilmManagement.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             LoadDataGrid();
         }
 
@@ -71,6 +71,7 @@ namespace TungMovie
             MemoryStream picture = new MemoryStream();
             moviepic.Image.Save(picture, moviepic.Image.RawFormat);
             Movie.addMovie(textFilmName.Text, textRating.Text, txtGenre.Text, txtDescription.Text, txtDuration.Text, picture);
+            Movie.insertMovieStatistics(textFilmName.Text);
             LoadDataGrid();
             MessageBox.Show("add success");
             

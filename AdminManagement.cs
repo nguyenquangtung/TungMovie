@@ -20,54 +20,44 @@ namespace TungMovie
             InitializeComponent();
         }
 
-		private void btnCustomerManagerment_Click(object sender, EventArgs e)
-		{
+        private void btnUserInfo_Click(object sender, EventArgs e)
+        {
+            new EditInfo().Show();
+        }
+
+        private void btnUserManagement_Click(object sender, EventArgs e)
+        {
             new UserManagement().Show();
-		}
+        }
 
-		private void btnManager_Click(object sender, EventArgs e)
-		{
+        private void btnScheduleManagement_Click(object sender, EventArgs e)
+        {
+            new ScheduleManagement().Show();
+        }
 
-		}
+        private void btnRoomManagement_Click(object sender, EventArgs e)
+        {
+            new RoomManagement().Show();
+        }
 
-		private void btnScheduleManagerment_Click(object sender, EventArgs e)
-		{
-			new ScheduleManagement().Show();
-		}
+        private void btnTicketManagement_Click(object sender, EventArgs e)
+        {
+            new TicketManagement().Show();
+        }
 
-		private void btnRoomManagerment_Click(object sender, EventArgs e)
-		{
-			new RoomManagement().Show();
-		}
+        private void btnFilmManagement_Click(object sender, EventArgs e)
+        {
+            new Film_management().Show();
+        }
 
-		private void btnCharacter_Click(object sender, EventArgs e)
-		{
-			new ListCharater().Show();
-		}
+        private void btnSeatManagement_Click(object sender, EventArgs e)
+        {
+            new SeatManagement().Show();
+        }
 
-		private void btnTicketManagerment_Click(object sender, EventArgs e)
-		{
-			new TicketManagement().Show();
-		}
-
-		private void btnMovieManagerment_Click(object sender, EventArgs e)
-		{
-			new Film_management().Show();
-		}
-
-		private void btnSeatManagerment_Click(object sender, EventArgs e)
-		{
-			new SeatManagement().Show();
-		}
-
-		private void btnStatitics_Click(object sender, EventArgs e)
-		{
-			new StatiticsForm().Show();
-		}
-
-		private void btnFilming_Click(object sender, EventArgs e)
-		{
-			new ListMV().Show();
-		}
-	}
+        private void btnStatistics_Click(object sender, EventArgs e)
+        {
+            new StatisticsManagement().Show();
+        }
+    }
 }

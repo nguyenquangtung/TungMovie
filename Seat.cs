@@ -74,5 +74,23 @@ namespace TungMovie
             sda.Fill(dt);
             return dt;
         }
+
+        public bool bookSeat(int seatid)
+        {
+            SqlCommand command = new SqlCommand("UPDATE Seat SET status = 'True' WHERE seatid = @seatid", db.GetConnection);
+            command.Parameters.Add("@seatid", SqlDbType.Int).Value = seatid;
+            db.openConnection();
+
+            if ((command.ExecuteNonQuery() == 1))
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
     }
 }

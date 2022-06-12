@@ -138,10 +138,10 @@ namespace TungMovie
             }
         }
 
-        public bool bookTicket(int ticketid, int price, DateTime booking_date, int schedule_id, string username, int seat_id, int room_id)
+        public bool bookTicket(int ticketid, int price, DateTime booking_date, int schedule_id, string username, int seat_id, int room_id, int movie_id)
         {
             SqlCommand command = new SqlCommand("UPDATE Ticket SET booking_date = @booking_date, schedule_id = @schedule_id " +
-                ", username = @username, seat_id = @seat_id, room_id = @room_id where ticketid = @ticketid and price = @price", db.GetConnection);
+                ", username = @username, seat_id = @seat_id, room_id = @room_id, movie_id = @movie_id where ticketid = @ticketid and price = @price", db.GetConnection);
             command.Parameters.Add("@ticketid", SqlDbType.VarChar).Value = ticketid;
             command.Parameters.Add("@price", SqlDbType.VarChar).Value = price;
             command.Parameters.Add("@booking_date", SqlDbType.DateTime).Value = booking_date;
@@ -149,6 +149,7 @@ namespace TungMovie
             command.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
             command.Parameters.Add("@seat_id", SqlDbType.Int).Value = seat_id;
             command.Parameters.Add("@room_id", SqlDbType.Int).Value = room_id;
+            command.Parameters.Add("@movie_id", SqlDbType.Int).Value = movie_id;
 
             db.openConnection();
 
