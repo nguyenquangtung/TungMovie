@@ -69,6 +69,7 @@
     <Compile Include="Chat.Designer.cs">
       <DependentUpon>Chat.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerBuilder.cs" />
     <Compile Include="CustomRounded.cs">
       <SubType>Component</SubType>
     </Compile>

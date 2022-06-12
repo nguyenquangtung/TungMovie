@@ -165,7 +165,7 @@ namespace TungMovie
             this.gridSeatManagement.AllowUserToAddRows = false;
             this.gridSeatManagement.AllowUserToDeleteRows = false;
             this.gridSeatManagement.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridSeatManagement.BackgroundColor = System.Drawing.Color.White;
+            this.gridSeatManagement.BackgroundColor = System.Drawing.SystemColors.Control;
             this.gridSeatManagement.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridSeatManagement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridSeatManagement.Location = new System.Drawing.Point(288, 23);

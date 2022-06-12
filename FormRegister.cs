@@ -93,26 +93,32 @@ namespace TungMovie
 				string fullname = txtFullname.Text;
 				string address = txtAddress.Text;
 				string email = txtEmail.Text;
-				DateTime year = (dateTimePicker1.Value);
-				string phonenumber = textPhone.Text;
+				DateTime bdate = (dateTimePicker1.Value);
+				int phonenumber = Convert.ToInt32(textPhone.Text);
+
+				var customerbuilder = new CustomerBuilder();
+
+				customerbuilder.AddFullname(username);
+				customerbuilder.AddPassword(password);
+				customerbuilder.AddFullname(fullname);
+				customerbuilder.AddAddress(address);
+				customerbuilder.AddEmail(email);
+				customerbuilder.AddBirthday(bdate);
+				customerbuilder.AddPhonenumber(phonenumber);
+
+
 				if (txtPassword.Text != txtConfirmPassword.Text)
 				{
 					MessageBox.Show("Check the Confirm Password.", "Register", MessageBoxButtons.OK);
 				}
 				else
 				{
-					us.auth_register(username, password, fullname, address, year, phonenumber, email);
-					MessageBox.Show("Register successful", "Register", MessageBoxButtons.OK);
-
-					/*if (us.auth_register(username, password, fullname, address, year, phonenumber, email))
-					{
-						MessageBox.Show("Register Fail", "Register", MessageBoxButtons.OK);
-
+					var customersettings = customerbuilder.Build();
+					if(customersettings != null)
+                    {
+						us.auth_register(username, password, fullname, address, bdate, phonenumber, email);
 					}
-					else
-					{
-						MessageBox.Show("Register successful", "Register", MessageBoxButtons.OK);
-					}*/
+					MessageBox.Show("Register successful", "Register", MessageBoxButtons.OK);
 				}
 			}
 			else

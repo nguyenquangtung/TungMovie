@@ -63,11 +63,10 @@ namespace TungMovie
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 284);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 231);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(805, 400);
+            this.dataGridView1.Size = new System.Drawing.Size(604, 325);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -76,110 +75,99 @@ namespace TungMovie
             this.labelRegister.AutoSize = true;
             this.labelRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.labelRegister.Location = new System.Drawing.Point(39, 11);
-            this.labelRegister.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelRegister.Location = new System.Drawing.Point(12, 26);
             this.labelRegister.Name = "labelRegister";
-            this.labelRegister.Size = new System.Drawing.Size(220, 39);
+            this.labelRegister.Size = new System.Drawing.Size(266, 31);
             this.labelRegister.TabIndex = 19;
-            this.labelRegister.Text = "Edit Account";
+            this.labelRegister.Text = "Users Management";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(320, 69);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(6, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 20);
+            this.label1.Size = new System.Drawing.Size(63, 16);
             this.label1.TabIndex = 20;
             this.label1.Text = "Fullname";
             // 
             // txtFullname
             // 
-            this.txtFullname.Location = new System.Drawing.Point(417, 64);
-            this.txtFullname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFullname.Location = new System.Drawing.Point(80, 89);
             this.txtFullname.Multiline = true;
             this.txtFullname.Name = "txtFullname";
-            this.txtFullname.Size = new System.Drawing.Size(185, 37);
+            this.txtFullname.Size = new System.Drawing.Size(140, 31);
             this.txtFullname.TabIndex = 21;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(107, 158);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Location = new System.Drawing.Point(80, 128);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(185, 37);
+            this.txtUsername.Size = new System.Drawing.Size(140, 31);
             this.txtUsername.TabIndex = 23;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 167);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(3, 136);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 20);
+            this.label2.Size = new System.Drawing.Size(71, 16);
             this.label2.TabIndex = 22;
             this.label2.Text = "Username";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(107, 218);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Location = new System.Drawing.Point(80, 177);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(185, 37);
+            this.txtPassword.Size = new System.Drawing.Size(140, 31);
             this.txtPassword.TabIndex = 25;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 229);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(6, 186);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 20);
+            this.label3.Size = new System.Drawing.Size(68, 16);
             this.label3.TabIndex = 24;
             this.label3.Text = "Password";
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(417, 111);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddress.Location = new System.Drawing.Point(313, 90);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(185, 37);
+            this.txtAddress.Size = new System.Drawing.Size(140, 31);
             this.txtAddress.TabIndex = 27;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(325, 119);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(244, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 20);
+            this.label4.Size = new System.Drawing.Size(59, 16);
             this.label4.TabIndex = 26;
             this.label4.Text = "Address";
             // 
             // txtphone
             // 
-            this.txtphone.Location = new System.Drawing.Point(417, 167);
-            this.txtphone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtphone.Location = new System.Drawing.Point(313, 136);
             this.txtphone.Multiline = true;
             this.txtphone.Name = "txtphone";
-            this.txtphone.Size = new System.Drawing.Size(185, 37);
+            this.txtphone.Size = new System.Drawing.Size(140, 31);
             this.txtphone.TabIndex = 29;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(328, 176);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(246, 143);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 20);
+            this.label5.Size = new System.Drawing.Size(47, 16);
             this.label5.TabIndex = 28;
             this.label5.Text = "Phone";
             // 
@@ -187,99 +175,89 @@ namespace TungMovie
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(328, 229);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(246, 186);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 20);
+            this.label6.Size = new System.Drawing.Size(57, 16);
             this.label6.TabIndex = 30;
             this.label6.Text = "Birthday";
             // 
             // txtBalance
             // 
-            this.txtBalance.Location = new System.Drawing.Point(813, 111);
-            this.txtBalance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBalance.Location = new System.Drawing.Point(610, 90);
             this.txtBalance.Multiline = true;
             this.txtBalance.Name = "txtBalance";
-            this.txtBalance.Size = new System.Drawing.Size(185, 37);
+            this.txtBalance.Size = new System.Drawing.Size(140, 31);
             this.txtBalance.TabIndex = 33;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(728, 112);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(546, 91);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 20);
+            this.label7.Size = new System.Drawing.Size(58, 16);
             this.label7.TabIndex = 32;
             this.label7.Text = "Balance";
             // 
             // txtRolecode
             // 
-            this.txtRolecode.Location = new System.Drawing.Point(813, 167);
-            this.txtRolecode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRolecode.Location = new System.Drawing.Point(610, 136);
             this.txtRolecode.Multiline = true;
             this.txtRolecode.Name = "txtRolecode";
-            this.txtRolecode.Size = new System.Drawing.Size(185, 37);
+            this.txtRolecode.Size = new System.Drawing.Size(140, 31);
             this.txtRolecode.TabIndex = 35;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(711, 176);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(533, 143);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 20);
+            this.label8.Size = new System.Drawing.Size(71, 16);
             this.label8.TabIndex = 34;
             this.label8.Text = "Role code";
             // 
             // txtModifiedbu
             // 
-            this.txtModifiedbu.Location = new System.Drawing.Point(813, 228);
-            this.txtModifiedbu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModifiedbu.Location = new System.Drawing.Point(610, 185);
             this.txtModifiedbu.Multiline = true;
             this.txtModifiedbu.Name = "txtModifiedbu";
-            this.txtModifiedbu.Size = new System.Drawing.Size(185, 37);
+            this.txtModifiedbu.Size = new System.Drawing.Size(140, 31);
             this.txtModifiedbu.TabIndex = 37;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(713, 236);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(535, 192);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 20);
+            this.label9.Size = new System.Drawing.Size(78, 16);
             this.label9.TabIndex = 36;
             this.label9.Text = "Modified by";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(813, 60);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Location = new System.Drawing.Point(610, 49);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(185, 37);
+            this.txtEmail.Size = new System.Drawing.Size(140, 31);
             this.txtEmail.TabIndex = 39;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(745, 69);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(559, 56);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 20);
+            this.label10.Size = new System.Drawing.Size(42, 16);
             this.label10.TabIndex = 38;
             this.label10.Text = "Email";
             // 
             // btnShow
             // 
-            this.btnShow.Location = new System.Drawing.Point(861, 368);
-            this.btnShow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnShow.Location = new System.Drawing.Point(646, 299);
             this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(121, 50);
+            this.btnShow.Size = new System.Drawing.Size(91, 41);
             this.btnShow.TabIndex = 41;
             this.btnShow.Text = "Show";
             this.btnShow.UseVisualStyleBackColor = true;
@@ -287,10 +265,9 @@ namespace TungMovie
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(861, 543);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Location = new System.Drawing.Point(646, 441);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(121, 50);
+            this.btnUpdate.Size = new System.Drawing.Size(91, 41);
             this.btnUpdate.TabIndex = 42;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -298,10 +275,9 @@ namespace TungMovie
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(861, 601);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Location = new System.Drawing.Point(646, 488);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(121, 50);
+            this.button4.Size = new System.Drawing.Size(91, 41);
             this.button4.TabIndex = 43;
             this.button4.Text = "Return";
             this.button4.UseVisualStyleBackColor = true;
@@ -309,10 +285,9 @@ namespace TungMovie
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(861, 310);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClear.Location = new System.Drawing.Point(646, 252);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(121, 50);
+            this.btnClear.Size = new System.Drawing.Size(91, 41);
             this.btnClear.TabIndex = 44;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -320,10 +295,9 @@ namespace TungMovie
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(861, 426);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Location = new System.Drawing.Point(646, 346);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(121, 50);
+            this.btnAdd.Size = new System.Drawing.Size(91, 41);
             this.btnAdd.TabIndex = 46;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -331,10 +305,9 @@ namespace TungMovie
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(861, 484);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Location = new System.Drawing.Point(646, 393);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(121, 50);
+            this.btnDelete.Size = new System.Drawing.Size(91, 41);
             this.btnDelete.TabIndex = 47;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -342,18 +315,17 @@ namespace TungMovie
             // 
             // txtBirthday
             // 
-            this.txtBirthday.Location = new System.Drawing.Point(417, 218);
-            this.txtBirthday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBirthday.Location = new System.Drawing.Point(313, 177);
             this.txtBirthday.Multiline = true;
             this.txtBirthday.Name = "txtBirthday";
-            this.txtBirthday.Size = new System.Drawing.Size(185, 37);
+            this.txtBirthday.Size = new System.Drawing.Size(140, 31);
             this.txtBirthday.TabIndex = 48;
             // 
-            // EditAccount
+            // UserManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1048, 686);
+            this.ClientSize = new System.Drawing.Size(786, 557);
             this.Controls.Add(this.txtBirthday);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
@@ -382,9 +354,8 @@ namespace TungMovie
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelRegister);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "EditAccount";
-            this.Text = "EditAccount";
+            this.Name = "UserManagement";
+            this.Text = "UsersManagement";
             this.Load += new System.EventHandler(this.EditAccount_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
