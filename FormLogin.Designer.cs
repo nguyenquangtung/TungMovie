@@ -156,8 +156,9 @@ namespace TungMovie
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::TungMovie.Properties.Resources.film_reel;
-            this.pictureBox1.Location = new System.Drawing.Point(282, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(282, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(76, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

@@ -173,12 +173,6 @@
     <Compile Include="SeatManagement.Designer.cs">
       <DependentUpon>SeatManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="StatiticsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StatiticsForm.Designer.cs">
-      <DependentUpon>StatiticsForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Ticket.cs" />
     <Compile Include="TicketManagement.cs">
       <SubType>Form</SubType>
@@ -251,9 +245,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SeatManagement.resx">
       <DependentUpon>SeatManagement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StatiticsForm.resx">
-      <DependentUpon>StatiticsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TicketManagement.resx">
       <DependentUpon>TicketManagement.cs</DependentUpon>

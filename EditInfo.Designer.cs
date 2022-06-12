@@ -261,7 +261,7 @@ namespace TungMovie
             this.Controls.Add(this.lbInfo);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditInfo";
-            this.Text = "EmployeeManagermentAccount";
+            this.Text = "EditInfo";
             this.Load += new System.EventHandler(this.EditInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
