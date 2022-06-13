@@ -35,7 +35,7 @@ namespace TungMovie
                 return false;
             }
         }
-        public void auth_register(string username, string password, string fullname,string address, DateTime year,int phonenumber,string email )
+        public void auth_register(string username, string password, string fullname,string address, DateTime year,string phonenumber,string email )
         {
                using (SqlConnection conn = new SqlConnection(@"Data Source=PC;Initial Catalog=Movie_ticket_management;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
               using (var cmd = new SqlCommand("dbo.proc_Add_account", conn)
@@ -48,7 +48,7 @@ namespace TungMovie
                 cmd.Parameters.Add("@password", SqlDbType.NVarChar).Value = password;
                 cmd.Parameters.Add("@fullname", SqlDbType.NVarChar).Value = fullname;
                 cmd.Parameters.Add("@address", SqlDbType.NVarChar).Value = address;
-                cmd.Parameters.Add("@phone", SqlDbType.Int).Value = phonenumber;
+                cmd.Parameters.Add("@phone", SqlDbType.NVarChar).Value = phonenumber;
                 cmd.Parameters.Add("@birthday", SqlDbType.NVarChar).Value = year;
                 cmd.Parameters.Add("@email", SqlDbType.NVarChar).Value = email;
                 cmd.Parameters.Add("@balance", SqlDbType.Float).Value = 0;
