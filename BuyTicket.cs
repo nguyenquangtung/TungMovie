@@ -119,6 +119,7 @@ namespace TungMovie
         {
             if ((txtIdTicket.Text.Trim() == "")
                 || (txtUserNumber.Text.Trim() == "")
+                || (txtOTP.Text.Trim() == "")
                 || (boxIdSeat.SelectedIndex == -1))
             {
                 return false;
@@ -197,5 +198,5 @@ namespace TungMovie
 		{
             this.Close();
         }
-	}
+    }
 }

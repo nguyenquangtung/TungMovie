@@ -63,6 +63,7 @@
     <Compile Include="Chat.Designer.cs">
       <DependentUpon>Chat.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerBuilder.cs" />
     <Compile Include="CustomRounded.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -78,6 +79,12 @@
     </Compile>
     <Compile Include="FilmManagement.Designer.cs">
       <DependentUpon>FilmManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlowPanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlowPanelForm.Designer.cs">
+      <DependentUpon>FlowPanelForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMenuCustomer.cs">
       <SubType>Form</SubType>
@@ -99,6 +106,12 @@
     </Compile>
     <Compile Include="StatisticsManagement.Designer.cs">
       <DependentUpon>StatisticsManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserItem.Designer.cs">
+      <DependentUpon>UserItem.cs</DependentUpon>
     </Compile>
     <Compile Include="UserManagement.cs">
       <SubType>Form</SubType>
@@ -188,6 +201,9 @@
     <EmbeddedResource Include="FilmManagement.resx">
       <DependentUpon>FilmManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FlowPanelForm.resx">
+      <DependentUpon>FlowPanelForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenuCustomer.resx">
       <DependentUpon>FormMenuCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StatisticsManagement.resx">
       <DependentUpon>StatisticsManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserItem.resx">
+      <DependentUpon>UserItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserManagement.resx">
       <DependentUpon>UserManagement.cs</DependentUpon>

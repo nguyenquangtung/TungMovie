@@ -37,5 +37,12 @@ namespace TungMovie
         {
             new ListCharater().Show();
         }
+
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new FormLogin().Show();
+            UserStore.StoreUsername = null;
+        }
     }
 }

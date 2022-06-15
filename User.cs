@@ -35,28 +35,32 @@ namespace TungMovie
                 return false;
             }
         }
-        public void auth_register(string username, string password, string fullname,string address, DateTime year,string phonenumber,string email )
+        public bool auth_register(string username, string password, string fullname,string address, DateTime birthday, string phone, string email )
         {
-               using (SqlConnection conn = new SqlConnection(@"Data Source=PC;Initial Catalog=Movie_ticket_management;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
-              using (var cmd = new SqlCommand("dbo.proc_Add_account", conn)
-            {
-                CommandType = CommandType.StoredProcedure
-            })
-            {
-                conn.Open();
+                SqlCommand cmd = new SqlCommand("insert into [User]  (username, password, fullname, address , birthday, phone, email) values (@username, @password, @fullname, @address , @birthday, @phone,  @email)", db.GetConnection);
                 cmd.Parameters.Add("@username", SqlDbType.NVarChar).Value = username;
                 cmd.Parameters.Add("@password", SqlDbType.NVarChar).Value = password;
                 cmd.Parameters.Add("@fullname", SqlDbType.NVarChar).Value = fullname;
                 cmd.Parameters.Add("@address", SqlDbType.NVarChar).Value = address;
-                cmd.Parameters.Add("@phone", SqlDbType.NVarChar).Value = phonenumber;
-                cmd.Parameters.Add("@birthday", SqlDbType.NVarChar).Value = year;
+                cmd.Parameters.Add("@phone", SqlDbType.NVarChar).Value = phone;
+                cmd.Parameters.Add("@birthday", SqlDbType.NVarChar).Value = birthday;
                 cmd.Parameters.Add("@email", SqlDbType.NVarChar).Value = email;
-                cmd.Parameters.Add("@balance", SqlDbType.Float).Value = 0;
                 cmd.Parameters.Add("@roleCode", SqlDbType.NVarChar).Value = "USER";
                 cmd.Parameters.Add("@createdBy", SqlDbType.NVarChar).Value = "";
-                cmd.ExecuteNonQuery();
-                conn.Close();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                db.closeConnection();
+                return true;
             }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
+
         }
 
         public string getrole(string username)
@@ -104,6 +108,25 @@ namespace TungMovie
         {
             SqlCommand command = new SqlCommand("select password, fullname, address, phone, birthday, email from [User] where username = @username", db.GetConnection);
             command.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
+            SqlDataAdapter sda = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
+
+        public DataTable getTotalUser()
+        {
+            SqlCommand command = new SqlCommand("select count(username) from [User]", db.GetConnection);
+            SqlDataAdapter sda = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
+
+
+        public DataTable getAllUserExceptID()
+        {
+            SqlCommand command = new SqlCommand("select username, password, fullname, address, phone, birthday, email, role_code from [User]", db.GetConnection);
             SqlDataAdapter sda = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
             sda.Fill(dt);

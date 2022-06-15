@@ -39,6 +39,7 @@ namespace TungMovie
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.labelRegister = new System.Windows.Forms.Label();
+            this.logout_btn = new TungMovie.RButton();
             this.SuspendLayout();
             // 
             // btnPurchasedTicket
@@ -48,7 +49,7 @@ namespace TungMovie
             this.btnPurchasedTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPurchasedTicket.ForeColor = System.Drawing.Color.White;
             this.btnPurchasedTicket.Image = ((System.Drawing.Image)(resources.GetObject("btnPurchasedTicket.Image")));
-            this.btnPurchasedTicket.Location = new System.Drawing.Point(393, 134);
+            this.btnPurchasedTicket.Location = new System.Drawing.Point(391, 123);
             this.btnPurchasedTicket.Margin = new System.Windows.Forms.Padding(2);
             this.btnPurchasedTicket.Name = "btnPurchasedTicket";
             this.btnPurchasedTicket.Size = new System.Drawing.Size(78, 50);
@@ -63,7 +64,7 @@ namespace TungMovie
             this.btnFilming.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFilming.ForeColor = System.Drawing.Color.White;
             this.btnFilming.Image = ((System.Drawing.Image)(resources.GetObject("btnFilming.Image")));
-            this.btnFilming.Location = new System.Drawing.Point(393, 208);
+            this.btnFilming.Location = new System.Drawing.Point(391, 197);
             this.btnFilming.Margin = new System.Windows.Forms.Padding(2);
             this.btnFilming.Name = "btnFilming";
             this.btnFilming.Size = new System.Drawing.Size(78, 50);
@@ -78,7 +79,7 @@ namespace TungMovie
             this.btnCharacterList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCharacterList.ForeColor = System.Drawing.Color.White;
             this.btnCharacterList.Image = ((System.Drawing.Image)(resources.GetObject("btnCharacterList.Image")));
-            this.btnCharacterList.Location = new System.Drawing.Point(118, 208);
+            this.btnCharacterList.Location = new System.Drawing.Point(116, 197);
             this.btnCharacterList.Margin = new System.Windows.Forms.Padding(2);
             this.btnCharacterList.Name = "btnCharacterList";
             this.btnCharacterList.Size = new System.Drawing.Size(78, 50);
@@ -93,7 +94,7 @@ namespace TungMovie
             this.btnUserInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUserInfo.ForeColor = System.Drawing.Color.White;
             this.btnUserInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnUserInfo.Image")));
-            this.btnUserInfo.Location = new System.Drawing.Point(118, 134);
+            this.btnUserInfo.Location = new System.Drawing.Point(116, 123);
             this.btnUserInfo.Margin = new System.Windows.Forms.Padding(2);
             this.btnUserInfo.Name = "btnUserInfo";
             this.btnUserInfo.Size = new System.Drawing.Size(78, 50);
@@ -105,7 +106,7 @@ namespace TungMovie
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(282, 148);
+            this.label10.Location = new System.Drawing.Point(280, 137);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(85, 20);
@@ -116,7 +117,7 @@ namespace TungMovie
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(24, 222);
+            this.label7.Location = new System.Drawing.Point(22, 211);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 20);
@@ -127,7 +128,7 @@ namespace TungMovie
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(282, 222);
+            this.label5.Location = new System.Drawing.Point(280, 211);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 20);
@@ -138,7 +139,7 @@ namespace TungMovie
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 148);
+            this.label4.Location = new System.Drawing.Point(22, 137);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 20);
@@ -156,12 +157,32 @@ namespace TungMovie
             this.labelRegister.TabIndex = 71;
             this.labelRegister.Text = "Customer menu";
             // 
+            // logout_btn
+            // 
+            this.logout_btn.BackColor = System.Drawing.Color.Red;
+            this.logout_btn.BackgroundColor = System.Drawing.Color.Red;
+            this.logout_btn.BorderColor = System.Drawing.Color.Red;
+            this.logout_btn.BorderRadius = 10;
+            this.logout_btn.BorderSize = 0;
+            this.logout_btn.FlatAppearance.BorderSize = 0;
+            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logout_btn.ForeColor = System.Drawing.Color.White;
+            this.logout_btn.Location = new System.Drawing.Point(427, 268);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(63, 26);
+            this.logout_btn.TabIndex = 73;
+            this.logout_btn.Text = "Logout";
+            this.logout_btn.TextColor = System.Drawing.Color.White;
+            this.logout_btn.UseVisualStyleBackColor = false;
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
+            // 
             // FormMenuCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(493, 296);
+            this.Controls.Add(this.logout_btn);
             this.Controls.Add(this.labelRegister);
             this.Controls.Add(this.btnPurchasedTicket);
             this.Controls.Add(this.btnFilming);
@@ -189,5 +210,6 @@ namespace TungMovie
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label labelRegister;
-	}
+        private RButton logout_btn;
+    }
 }

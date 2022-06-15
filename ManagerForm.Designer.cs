@@ -43,6 +43,7 @@ namespace TungMovie
             this.btnFilmManagement = new System.Windows.Forms.Button();
             this.btnSeatManagement = new System.Windows.Forms.Button();
             this.btnTicketManagement = new System.Windows.Forms.Button();
+            this.logout_btn = new TungMovie.RButton();
             this.SuspendLayout();
             // 
             // labelRegister
@@ -208,12 +209,32 @@ namespace TungMovie
             this.btnTicketManagement.UseVisualStyleBackColor = false;
             this.btnTicketManagement.Click += new System.EventHandler(this.btnTicketManagement_Click);
             // 
+            // logout_btn
+            // 
+            this.logout_btn.BackColor = System.Drawing.Color.Red;
+            this.logout_btn.BackgroundColor = System.Drawing.Color.Red;
+            this.logout_btn.BorderColor = System.Drawing.Color.Red;
+            this.logout_btn.BorderRadius = 10;
+            this.logout_btn.BorderSize = 0;
+            this.logout_btn.FlatAppearance.BorderSize = 0;
+            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logout_btn.ForeColor = System.Drawing.Color.White;
+            this.logout_btn.Location = new System.Drawing.Point(475, 301);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(63, 26);
+            this.logout_btn.TabIndex = 73;
+            this.logout_btn.Text = "Logout";
+            this.logout_btn.TextColor = System.Drawing.Color.White;
+            this.logout_btn.UseVisualStyleBackColor = false;
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(541, 303);
+            this.ClientSize = new System.Drawing.Size(541, 330);
+            this.Controls.Add(this.logout_btn);
             this.Controls.Add(this.btnTicketManagement);
             this.Controls.Add(this.btnSeatManagement);
             this.Controls.Add(this.btnFilmManagement);
@@ -249,5 +270,6 @@ namespace TungMovie
         private System.Windows.Forms.Button btnFilmManagement;
         private System.Windows.Forms.Button btnSeatManagement;
         private System.Windows.Forms.Button btnTicketManagement;
-	}
+        private RButton logout_btn;
+    }
 }

@@ -93,15 +93,16 @@ namespace TungMovie
 				string fullname = txtFullname.Text;
 				string address = txtAddress.Text;
 				string email = txtEmail.Text;
-				DateTime year = (dateTimePicker1.Value);
+				DateTime bdate = (dateTimePicker1.Value);
 				string phonenumber = textPhone.Text;
+
 				if (txtPassword.Text != txtConfirmPassword.Text)
 				{
 					MessageBox.Show("Check the Confirm Password.", "Register", MessageBoxButtons.OK);
 				}
 				else
 				{
-					us.auth_register(username, password, fullname, address, year, phonenumber, email);
+					us.auth_register(username, password, fullname, address, bdate, phonenumber, email);
 					MessageBox.Show("Register successful", "Register", MessageBoxButtons.OK);
 
 					/*if (us.auth_register(username, password, fullname, address, year, phonenumber, email))

@@ -220,20 +220,19 @@ namespace TungMovie
 
 		private void btnClear_Click(object sender, EventArgs e)
 		{
-            table.Clear();
-
-            dataGridView1.DataSource = table;
-            txtUsername.Text = "";
-            txtPassword.Text = "";
-            txtFullname.Text = "";
-            txtAddress.Text = "";
-            txtBalance.Text = "";
-            txtEmail.Text = "";
-            txtModifiedbu.Text = "";
-            txtphone.Text = "";
-            txtRolecode.Text = "";
-            txtBirthday.Text = "";
-            txtUsername.Focus();
+            //table.Clear();
+            //dataGridView1.DataSource = table;
+            //txtUsername.Text = "";
+            //txtPassword.Text = "";
+            //txtFullname.Text = "";
+            //txtAddress.Text = "";
+            //txtBalance.Text = "";
+            //txtEmail.Text = "";
+            //txtModifiedbu.Text = "";
+            //txtphone.Text = "";
+            //txtRolecode.Text = "";
+            //txtBirthday.Text = "";
+            //txtUsername.Focus();
         }
 
 		private void btnAdd_Click(object sender, EventArgs e)
@@ -289,6 +288,11 @@ namespace TungMovie
             //{
 
             //}
+        }
+
+        private void btnPanel_Click(object sender, EventArgs e)
+        {
+            new FlowPanelForm().Show();
         }
     }
 }
