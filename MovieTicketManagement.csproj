@@ -56,12 +56,6 @@
     <Compile Include="AdminManagement.Designer.cs">
       <DependentUpon>AdminManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="BuyTicketManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BuyTicketManagement.Designer.cs">
-      <DependentUpon>BuyTicketManagement.cs</DependentUpon>
-    </Compile>
     <Compile Include="CharacterInfo.cs" />
     <Compile Include="Chat.cs">
       <SubType>Form</SubType>
@@ -184,9 +178,6 @@
     <Compile Include="UserStore.cs" />
     <EmbeddedResource Include="AdminManagement.resx">
       <DependentUpon>AdminManagement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BuyTicketManagement.resx">
-      <DependentUpon>BuyTicketManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Chat.resx">
       <DependentUpon>Chat.cs</DependentUpon>

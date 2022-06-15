@@ -19,6 +19,18 @@ namespace TungMovie
             sda.Fill(dt);
             return dt;
         }
+
+        public DataTable getroombyid(int roomid)
+        {
+            SqlCommand command = new SqlCommand("select * from [Room] where roomid = @roomid", db.GetConnection);
+            command.Parameters.Add("@roomid", SqlDbType.Int).Value = roomid;
+            SqlDataAdapter sda = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
+
+
         public bool AddRoom(string name, int seat)
         {
             SqlCommand command = new SqlCommand("insert into Room values(@name, @seat)", db.GetConnection);

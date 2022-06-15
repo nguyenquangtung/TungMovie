@@ -78,17 +78,6 @@ namespace TungMovie
 			}
         }
 
-        private void btnDetail_Click(object sender, EventArgs e)
-        {
-			if(getmoviename != null)
-            {
-				new BuyTicket(getmovieid,getmoviename).Show();
-            }
-			else
-            {
-				MessageBox.Show("Please select a movie name", "List Movie", MessageBoxButtons.OK);
-			}
-        }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -103,6 +92,18 @@ namespace TungMovie
 			else
 			{
 				txtSearch.ReadOnly = true;
+			}
+		}
+
+        private void btnDetail_Click_1(object sender, EventArgs e)
+        {
+			if (getmoviename != null)
+			{
+				new BuyTicket(getmovieid, getmoviename).Show();
+			}
+			else
+			{
+				MessageBox.Show("Please select a movie name", "List Movie", MessageBoxButtons.OK);
 			}
 		}
     }
