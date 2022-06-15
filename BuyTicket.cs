@@ -80,11 +80,6 @@ namespace TungMovie
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void txtIdRoom_TextChanged(object sender, EventArgs e)
         {
             int roomid = Int32.Parse(txtIdRoom.Text);
@@ -119,8 +114,40 @@ namespace TungMovie
             }
         }
 
-        private void btnBookTicket_Click(object sender, EventArgs e)
+
+        bool verif()
         {
+            if ((txtIdTicket.Text.Trim() == "")
+                || (txtUserNumber.Text.Trim() == "")
+                || (boxIdSeat.SelectedIndex == -1))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private void boxPaymentType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string type = boxPaymentType.SelectedItem.ToString();
+            if (type.Equals("MoMo"))
+            {
+                lb_receiver.Text = "Receiver's MoMo";
+            }
+            else if (type.Equals("ZaloPay"))
+            {
+                lb_receiver.Text = "Receiver's ZaloPay";
+            }
+            else
+            {
+                lb_receiver.Text = "Receiver's ViettelPay";
+            }
+        }
+
+		private void btnBookTicket_Click(object sender, EventArgs e)
+		{
             if (verif())
             {
                 int scheduleid = Convert.ToInt32(boxScheduleId.SelectedValue);
@@ -166,36 +193,9 @@ namespace TungMovie
             }
         }
 
-        bool verif()
-        {
-            if ((txtIdTicket.Text.Trim() == "")
-                || (txtUserNumber.Text.Trim() == "")
-                || (boxIdSeat.SelectedIndex == -1))
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+		private void btnCancel_Click(object sender, EventArgs e)
+		{
+            this.Close();
         }
-
-        private void boxPaymentType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string type = boxPaymentType.SelectedItem.ToString();
-            if (type.Equals("MoMo"))
-            {
-                lb_receiver.Text = "Receiver's MoMo";
-            }
-            else if (type.Equals("ZaloPay"))
-            {
-                lb_receiver.Text = "Receiver's ZaloPay";
-            }
-            else
-            {
-                lb_receiver.Text = "Receiver's ViettelPay";
-            }
-        }
-
-    }
+	}
 }

@@ -59,8 +59,8 @@ namespace TungMovie
             gridListChr.DataSource = dt.Tables["tblCharacter"];
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
+		private void btnSearch_Click(object sender, EventArgs e)
+		{
             if (connection == null)
             {
                 connection = new SqlConnection(str2);
@@ -93,6 +93,5 @@ namespace TungMovie
                 gridListChr.DataSource = dt.Tables["tblCharacter"];
             }
         }
-        
-    }
+	}
 }

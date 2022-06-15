@@ -33,17 +33,20 @@ namespace TungMovie
             txtSeatsAmount.Text = gridRoomManagement.Rows[e.RowIndex].Cells["mun_of_seats"].Value.ToString();
         }
 
-        private void btnViewRoomMgt_Click(object sender, EventArgs e)
+        private void gridRoomManagement_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            gridRoomManagement.Visible = true;
+            int r = gridRoomManagement.CurrentCell.RowIndex;
+            boxRoomID.Text = gridRoomManagement.Rows[r].Cells[0].Value.ToString();
+            txtName.Text = gridRoomManagement.Rows[r].Cells[1].Value.ToString();
+            txtSeatsAmount.Text = gridRoomManagement.Rows[r].Cells[2].Value.ToString();
         }
 
-        private void btnAddRoom_Click(object sender, EventArgs e)
-        {
+		private void btnAddRoom_Click(object sender, EventArgs e)
+		{
             string name = txtName.Text.ToString();
             int seat = Int32.Parse(txtSeatsAmount.Text.ToString());
-            
-            
+
+
             if (room.AddRoom(name, seat))
             {
                 gridRoomManagement.DataSource = room.getroomlist();
@@ -55,8 +58,9 @@ namespace TungMovie
             }
         }
 
-        private void btnDeleteRoom_Click(object sender, EventArgs e)
-        {
+		private void btnDeleteRoom_Click(object sender, EventArgs e)
+		{
+
             int r = gridRoomManagement.CurrentCell.RowIndex;
             int id = Int32.Parse(gridRoomManagement.Rows[r].Cells[0].Value.ToString());
             if (room.DeleteRoom(id))
@@ -70,13 +74,14 @@ namespace TungMovie
             }
         }
 
-        private void btnUpdateRoom_Click(object sender, EventArgs e)
-        {
-            
+		private void btnUpdateRoom_Click(object sender, EventArgs e)
+		{
+
+
             int roomid = Int32.Parse(boxRoomID.Text.ToString());
             string name = txtName.Text.ToString();
             int seat = Int32.Parse(txtSeatsAmount.Text.ToString());
-            
+
 
             if (room.UpdateRoom(roomid, name, seat))
             {
@@ -89,13 +94,10 @@ namespace TungMovie
             }
         }
 
-        private void gridRoomManagement_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int r = gridRoomManagement.CurrentCell.RowIndex;
-            boxRoomID.Text = gridRoomManagement.Rows[r].Cells[0].Value.ToString();
-            txtName.Text = gridRoomManagement.Rows[r].Cells[1].Value.ToString();
-            txtSeatsAmount.Text = gridRoomManagement.Rows[r].Cells[2].Value.ToString();
+		private void btnViewRoomMgt_Click(object sender, EventArgs e)
+		{
+            gridRoomManagement.Visible = true;
         }
-    }
+	}
     
 }

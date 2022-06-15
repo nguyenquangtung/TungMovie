@@ -43,39 +43,6 @@ namespace TungMovie
             gridTicketManagement.DataSource = sc.getScheduleList();
         }
 
-        private void btnAddSchedule_Click(object sender, EventArgs e)
-        {
-            int id = Int32.Parse(boxScheduleId.SelectedValue.ToString());
-            DateTime start = dateStartTime.Value.Date;
-            DateTime end = dateEndTime.Value.Date;
-            int movieid = Int32.Parse(txtIdMovie.Text.ToString());
-            int roomid = Int32.Parse(txtIdRoom.Text.ToString());
-            if (sc.addSchedule(id, start, end, movieid, roomid))
-            {
-                MessageBox.Show("Add Schedule Successful", "Schedule", MessageBoxButtons.OK);
-                refresh();
-            }
-            else
-            {
-                MessageBox.Show("Error", "Schedule", MessageBoxButtons.OK);
-            }
-
-        }
-
-        private void btnViewSchedule_Click(object sender, EventArgs e)
-        {
-            refresh();
-            if (!(gridTicketManagement.Visible))
-            {
-                this.Size = new Size(1070, 445);
-                gridTicketManagement.Visible = true;
-            }
-            else
-            {
-                this.Size = new Size(405, 445);
-                gridTicketManagement.Visible = false;
-            }
-        }
         bool verif()
         {
             if ((txtIdMovie.Text.Trim() == "")
@@ -87,30 +54,6 @@ namespace TungMovie
             else
             {
                 return true;
-            }
-        }
-
-        private void btnUpdateSchedule_Click(object sender, EventArgs e)
-        {
-            if (verif())
-            {
-                int id = Int32.Parse(boxScheduleId.SelectedValue.ToString());
-                DateTime start = dateStartTime.Value.Date;
-                DateTime end = dateEndTime.Value.Date;
-                int movieid = Int32.Parse(txtIdMovie.Text.ToString());
-                int roomid = Int32.Parse(txtIdRoom.Text.ToString());
-                if (sc.addSchedule(id, start, end, movieid, roomid))
-                {
-                    MessageBox.Show("Update Schedule Successful", "Schedule", MessageBoxButtons.OK);
-                }
-                else
-                {
-                    MessageBox.Show("Error", "Schedule", MessageBoxButtons.OK);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Blank is not allowed", "Schedule", MessageBoxButtons.OK);
             }
         }
 
@@ -147,8 +90,26 @@ namespace TungMovie
             }
         }
 
-        private void btnDeleteSchedule_Click(object sender, EventArgs e)
-        {
+		private void btnAddSchedule_Click(object sender, EventArgs e)
+		{
+            int id = Int32.Parse(boxScheduleId.SelectedValue.ToString());
+            DateTime start = dateStartTime.Value.Date;
+            DateTime end = dateEndTime.Value.Date;
+            int movieid = Int32.Parse(txtIdMovie.Text.ToString());
+            int roomid = Int32.Parse(txtIdRoom.Text.ToString());
+            if (sc.addSchedule(id, start, end, movieid, roomid))
+            {
+                MessageBox.Show("Add Schedule Successful", "Schedule", MessageBoxButtons.OK);
+                refresh();
+            }
+            else
+            {
+                MessageBox.Show("Error", "Schedule", MessageBoxButtons.OK);
+            }
+        }
+
+		private void btnDeleteSchedule_Click(object sender, EventArgs e)
+		{
             int id = Convert.ToInt32(boxScheduleId.SelectedValue);
             if (sc.deleteSchedule(id))
             {
@@ -159,7 +120,51 @@ namespace TungMovie
             {
                 MessageBox.Show("Error", "Schedule", MessageBoxButtons.OK);
             }
-            
         }
-    }
+
+		private void btnUpdateSchedule_Click(object sender, EventArgs e)
+		{
+            if (verif())
+            {
+                int id = Int32.Parse(boxScheduleId.SelectedValue.ToString());
+                DateTime start = dateStartTime.Value.Date;
+                DateTime end = dateEndTime.Value.Date;
+                int movieid = Int32.Parse(txtIdMovie.Text.ToString());
+                int roomid = Int32.Parse(txtIdRoom.Text.ToString());
+                if (sc.addSchedule(id, start, end, movieid, roomid))
+                {
+                    MessageBox.Show("Update Schedule Successful", "Schedule", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Error", "Schedule", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Blank is not allowed", "Schedule", MessageBoxButtons.OK);
+            }
+        }
+
+		private void btnViewSchedule_Click(object sender, EventArgs e)
+		{
+
+            refresh();
+            if (!(gridTicketManagement.Visible))
+            {
+                this.Size = new Size(1070, 445);
+                gridTicketManagement.Visible = true;
+            }
+            else
+            {
+                this.Size = new Size(405, 445);
+                gridTicketManagement.Visible = false;
+            }
+        }
+
+		private void btnPrintSchedule_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

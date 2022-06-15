@@ -65,43 +65,6 @@ namespace TungMovie
 
         }
 
-        private void btn_add_Click(object sender, EventArgs e)
-        {
-            MovieInfo Movie = new MovieInfo();
-            MemoryStream picture = new MemoryStream();
-            moviepic.Image.Save(picture, moviepic.Image.RawFormat);
-            Movie.addMovie(textFilmName.Text, textRating.Text, txtGenre.Text, txtDescription.Text, txtDuration.Text, picture);
-            Movie.insertMovieStatistics(textFilmName.Text);
-            LoadDataGrid();
-            MessageBox.Show("add success");
-            
-        }
-
-        private void btn_update_Click(object sender, EventArgs e)
-        {
-            MovieInfo Movie = new MovieInfo();
-            MemoryStream picture = new MemoryStream();
-            moviepic.Image.Save(picture, moviepic.Image.RawFormat);
-            Movie.updateMovie(textFilmName.Text, textRating.Text, txtGenre.Text, txtDescription.Text, txtDuration.Text, boxFilmId.Text, picture);
-            LoadDataGrid();
-            MessageBox.Show("add success");
-        }
-
-        private void btn_delete_Click(object sender, EventArgs e)
-        {
-            MovieInfo Movie = new MovieInfo();
-            Movie.DeleteMovie(boxFilmId.Text);
-            LoadDataGrid();
-            MessageBox.Show("delete success ");
-
-        }
-
-        private void btn_Schedule_Click(object sender, EventArgs e)
-        {
-            new ScheduleManagement().Show();
-            this.Close();
-        }
-
         private void btnUpload_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
@@ -116,5 +79,40 @@ namespace TungMovie
         {
 
         }
-    }
+
+		private void btn_add_Click(object sender, EventArgs e)
+		{
+            MovieInfo Movie = new MovieInfo();
+            MemoryStream picture = new MemoryStream();
+            moviepic.Image.Save(picture, moviepic.Image.RawFormat);
+            Movie.addMovie(textFilmName.Text, textRating.Text, txtGenre.Text, txtDescription.Text, txtDuration.Text, picture);
+            Movie.insertMovieStatistics(textFilmName.Text);
+            LoadDataGrid();
+            MessageBox.Show("Add success");
+        }
+
+		private void btn_update_Click(object sender, EventArgs e)
+		{
+            MovieInfo Movie = new MovieInfo();
+            MemoryStream picture = new MemoryStream();
+            moviepic.Image.Save(picture, moviepic.Image.RawFormat);
+            Movie.updateMovie(textFilmName.Text, textRating.Text, txtGenre.Text, txtDescription.Text, txtDuration.Text, boxFilmId.Text, picture);
+            LoadDataGrid();
+            MessageBox.Show("Add success");
+        }
+
+		private void btn_Schedule_Click(object sender, EventArgs e)
+		{
+            new ScheduleManagement().Show();
+            this.Close();
+        }
+
+		private void btn_delete_Click(object sender, EventArgs e)
+		{
+            MovieInfo Movie = new MovieInfo();
+            Movie.DeleteMovie(boxFilmId.Text);
+            LoadDataGrid();
+            MessageBox.Show("Delete success ");
+        }
+	}
 }

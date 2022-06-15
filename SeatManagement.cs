@@ -62,15 +62,6 @@ namespace TungMovie
             }
         }
 
-        private void btnUpdateSchedule_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnDeleteSchedule_Click(object sender, EventArgs e)
-        {
-
-        }
 
 
         bool verif()
@@ -100,9 +91,8 @@ namespace TungMovie
         {
             gridSeatManagement.DataSource = se.getSeatList();
         }
-
-        private void btnViewSeat_Click(object sender, EventArgs e)
-        {
+		private void btnViewSeat_Click(object sender, EventArgs e)
+		{
             refresh();
             if (!(gridSeatManagement.Visible))
             {
@@ -116,8 +106,8 @@ namespace TungMovie
             }
         }
 
-        private void btnUpdateSeat_Click(object sender, EventArgs e)
-        {
+		private void btnUpdateSeat_Click(object sender, EventArgs e)
+		{
             if (verif())
             {
                 int id = Int32.Parse(boxSeatId.SelectedValue.ToString());
@@ -140,5 +130,5 @@ namespace TungMovie
                 MessageBox.Show("Blank is not allowed", "Seat", MessageBoxButtons.OK);
             }
         }
-    }
+	}
 }

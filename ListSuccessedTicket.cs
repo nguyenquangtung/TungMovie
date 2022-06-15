@@ -34,9 +34,7 @@ namespace TungMovie
             LoadDataGrid();
 		}
 
-
-
-		private void btnPrint_Click_1(object sender, EventArgs e)
+		private void btnPrint_Click(object sender, EventArgs e)
 		{
             try
             {
@@ -78,7 +76,7 @@ namespace TungMovie
                     para1.Range.set_Style(ref styleHeading2);
                     para1.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
                     para1.Range.Font.Color = WdColor.wdColorBlack;
-                    para1.Range.Text = "Username: " + UserStore.StoreUsername.ToString() +"\n";
+                    para1.Range.Text = "Username: " + UserStore.StoreUsername.ToString() + "\n";
                     para1.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
 
                     int rows = gridBookedTicket.Rows.Count;

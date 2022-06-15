@@ -19,39 +19,6 @@ namespace TungMovie
             InitializeComponent();
         }
 
-
-        private void btn_UpdateAccount_Click(object sender, EventArgs e)
-        {
-            if(verif())
-            {
-                string username = txtUsername.Text;
-                string password = txtPassword.Text;
-                string fullname = txtFullname.Text;
-                string address = txtAddress.Text;
-                int phone = Int32.Parse(txtPhone.Text);
-                DateTime birthday = dateBirthday.Value;
-                string email = txtEmail.Text;
-                if(us.updateUserInfo(username,password,fullname,address,phone,birthday,email))
-                {
-                    MessageBox.Show("Update successful", "User info", MessageBoxButtons.OK);
-                }
-                else
-                {
-                    MessageBox.Show("Error", "User info", MessageBoxButtons.OK);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Blank is not allowed", "User info", MessageBoxButtons.OK);
-            }
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         bool verif()
         {
             if ((txtPassword.Text.Trim() == "")
@@ -91,5 +58,36 @@ namespace TungMovie
 
             }
         }
-    }
+
+		private void btn_UpdateAccount_Click(object sender, EventArgs e)
+		{
+            if (verif())
+            {
+                string username = txtUsername.Text;
+                string password = txtPassword.Text;
+                string fullname = txtFullname.Text;
+                string address = txtAddress.Text;
+                int phone = Int32.Parse(txtPhone.Text);
+                DateTime birthday = dateBirthday.Value;
+                string email = txtEmail.Text;
+                if (us.updateUserInfo(username, password, fullname, address, phone, birthday, email))
+                {
+                    MessageBox.Show("Update successful", "User info", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Error", "User info", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Blank is not allowed", "User info", MessageBoxButtons.OK);
+            }
+        }
+
+		private void btnReturn_Click(object sender, EventArgs e)
+		{
+            this.Close();
+        }
+	}
 }

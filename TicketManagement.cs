@@ -111,8 +111,25 @@ namespace TungMovie
             gridTicketManagement.DataSource = ti.getTicketList();
         }
 
-        private void btnViewTicket_Click(object sender, EventArgs e)
+
+        bool verif()
         {
+            if ((txtPrice.Text.Trim() == "")
+                || (boxIdSeat.SelectedIndex == -1)
+                || (boxIdSchedule.SelectedIndex == -1)
+                || (boxUsername.SelectedIndex == -1)
+                || (txtIdRoom.Text.Trim() == ""))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+		private void btnViewTicket_Click(object sender, EventArgs e)
+		{
             refresh();
             if (!(gridTicketManagement.Visible))
             {
@@ -124,11 +141,38 @@ namespace TungMovie
                 this.Size = new Size(405, 445);
                 gridTicketManagement.Visible = false;
             }
-
         }
 
-        private void btnAddTicket_Click(object sender, EventArgs e)
-        {
+		private void btnUpdateTicket_Click(object sender, EventArgs e)
+		{
+
+            if (verif())
+            {
+                int id = Int32.Parse(boxTicketId.SelectedValue.ToString());
+                int price = Int32.Parse(txtPrice.Text.ToString());
+                DateTime bookingdate = dateBookingDate.Value.Date;
+                int scheduleid = Int32.Parse(boxIdSchedule.SelectedValue.ToString());
+                string username = boxUsername.SelectedValue.ToString();
+                int seatid = Int32.Parse(boxIdSeat.SelectedValue.ToString());
+                int roomid = Int32.Parse(txtIdRoom.Text.ToString());
+                if (ti.updateTicket(id, price, bookingdate, scheduleid, username, seatid, roomid))
+                {
+                    MessageBox.Show("UPdate Ticket Successful", "Ticket", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Error", "Ticket", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Blank is not allowed", "Ticket", MessageBoxButtons.OK);
+            }
+        }
+
+		private void btnAddTicket_Click(object sender, EventArgs e)
+		{
+
             int price = Convert.ToInt32(txtPrice.Text);
             if (txtPrice.Text.Trim() != null)
             {
@@ -152,47 +196,5 @@ namespace TungMovie
                 MessageBox.Show("Please add ticket's price", "Ticket", MessageBoxButtons.OK);
             }
         }
-
-        private void btnUpdateTicket_Click(object sender, EventArgs e)
-        {
-            if(verif())
-            {
-                int id = Int32.Parse(boxTicketId.SelectedValue.ToString());
-                int price = Int32.Parse(txtPrice.Text.ToString());
-                DateTime bookingdate = dateBookingDate.Value.Date;
-                int scheduleid = Int32.Parse(boxIdSchedule.SelectedValue.ToString());
-                string username = boxUsername.SelectedValue.ToString();
-                int seatid = Int32.Parse(boxIdSeat.SelectedValue.ToString());
-                int roomid = Int32.Parse(txtIdRoom.Text.ToString());
-                if (ti.updateTicket(id,price,bookingdate,scheduleid,username,seatid, roomid))
-                {
-                    MessageBox.Show("UPdate Ticket Successful", "Ticket", MessageBoxButtons.OK);
-                }
-                else
-                {
-                    MessageBox.Show("Error", "Ticket", MessageBoxButtons.OK);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Blank is not allowed", "Ticket", MessageBoxButtons.OK);
-            }
-        }
-
-        bool verif()
-        {
-            if ((txtPrice.Text.Trim() == "")
-                || (boxIdSeat.SelectedIndex == -1)
-                || (boxIdSchedule.SelectedIndex == -1)
-                || (boxUsername.SelectedIndex == -1)
-                || (txtIdRoom.Text.Trim() == ""))
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-    }
+	}
 }
