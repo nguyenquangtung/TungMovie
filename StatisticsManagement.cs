@@ -60,10 +60,5 @@ namespace TungMovie
         {
             statisticschart.DataSource = sta.getStatisticsList();
         }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }
