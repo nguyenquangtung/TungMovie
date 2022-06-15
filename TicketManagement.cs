@@ -54,7 +54,7 @@ namespace TungMovie
 
         public void LoadTicketGrid()
         {
-            this.Size = new Size(405, 445);
+            this.Size = new Size(410, 450);
             gridTicketManagement.RowTemplate.Height = 30;
             gridTicketManagement.Visible = false;
             gridTicketManagement.DataSource = ti.getTicketList();
@@ -116,12 +116,12 @@ namespace TungMovie
             refresh();
             if (!(gridTicketManagement.Visible))
             {
-                this.Size = new Size(1070, 445);
+                this.Size = new Size(1070, 450);
                 gridTicketManagement.Visible = true;
             }
             else
             {
-                this.Size = new Size(405, 445);
+                this.Size = new Size(410, 450);
                 gridTicketManagement.Visible = false;
             }
 

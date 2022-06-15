@@ -26,7 +26,7 @@ namespace TungMovie
         }
         public void LoadScheduleGrid()
         {
-            this.Size = new Size(405, 445);
+            this.Size = new Size(410, 450);
             gridTicketManagement.RowTemplate.Height = 30;
             gridTicketManagement.Visible = false;
             gridTicketManagement.DataSource = sc.getScheduleList();
@@ -45,19 +45,24 @@ namespace TungMovie
 
         private void btnAddSchedule_Click(object sender, EventArgs e)
         {
-            int id = Int32.Parse(boxScheduleId.SelectedValue.ToString());
+            bool check = false;
+            boxScheduleId.SelectedIndex = -1;
             DateTime start = dateStartTime.Value.Date;
             DateTime end = dateEndTime.Value.Date;
+            if (dateEndTime.Value > dateStartTime.Value)
+            {
+                check = true;
+            }
             int movieid = Int32.Parse(txtIdMovie.Text.ToString());
             int roomid = Int32.Parse(txtIdRoom.Text.ToString());
-            if (sc.addSchedule(id, start, end, movieid, roomid))
+            if (check && sc.addSchedule(start, end, movieid, roomid))
             {
                 MessageBox.Show("Add Schedule Successful", "Schedule", MessageBoxButtons.OK);
                 refresh();
             }
             else
             {
-                MessageBox.Show("Error", "Schedule", MessageBoxButtons.OK);
+                MessageBox.Show("End time must be greater than start time", "Schedule", MessageBoxButtons.OK);
             }
 
         }
@@ -67,12 +72,12 @@ namespace TungMovie
             refresh();
             if (!(gridTicketManagement.Visible))
             {
-                this.Size = new Size(1070, 445);
+                this.Size = new Size(905, 450);
                 gridTicketManagement.Visible = true;
             }
             else
             {
-                this.Size = new Size(405, 445);
+                this.Size = new Size(410, 450);
                 gridTicketManagement.Visible = false;
             }
         }
@@ -92,20 +97,25 @@ namespace TungMovie
 
         private void btnUpdateSchedule_Click(object sender, EventArgs e)
         {
+            bool check = false;
             if (verif())
             {
                 int id = Int32.Parse(boxScheduleId.SelectedValue.ToString());
                 DateTime start = dateStartTime.Value.Date;
                 DateTime end = dateEndTime.Value.Date;
+                if(dateEndTime.Value > dateStartTime.Value)
+                {
+                    check = true;
+                }
                 int movieid = Int32.Parse(txtIdMovie.Text.ToString());
                 int roomid = Int32.Parse(txtIdRoom.Text.ToString());
-                if (sc.addSchedule(id, start, end, movieid, roomid))
+                if (check && sc.updateSchedule(id, start, end, movieid, roomid))
                 {
                     MessageBox.Show("Update Schedule Successful", "Schedule", MessageBoxButtons.OK);
                 }
                 else
                 {
-                    MessageBox.Show("Error", "Schedule", MessageBoxButtons.OK);
+                    MessageBox.Show("End time must be greater than start time", "Schedule", MessageBoxButtons.OK);
                 }
             }
             else

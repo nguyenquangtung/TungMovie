@@ -52,10 +52,9 @@ namespace TungMovie
             sda.Fill(dt);
             return dt;
         }
-        public bool addSchedule(int scheduleid, DateTime start, DateTime end, int movieId, int roomId)
+        public bool addSchedule(DateTime start, DateTime end, int movieId, int roomId)
         {
-            SqlCommand command = new SqlCommand("INSERT INTO Schedule (scheduleid, start_time, end_time, movie_id, room_id) VALUES (@scheduleid, @start, @end, @movieId, @roomId)", db.GetConnection);
-            command.Parameters.Add("@scheduleid", SqlDbType.Int).Value = scheduleid;
+            SqlCommand command = new SqlCommand("INSERT INTO Schedule (start_time, end_time, movie_id, room_id) VALUES (@start, @end, @movieId, @roomId)", db.GetConnection);
             command.Parameters.Add("@start", SqlDbType.DateTime).Value = start;
             command.Parameters.Add("@end", SqlDbType.DateTime).Value = end;
             command.Parameters.Add("@movieId", SqlDbType.Int).Value = movieId;
@@ -102,6 +101,7 @@ namespace TungMovie
         {
             SqlCommand command = new SqlCommand("DELETE FROM Schedule WHERE scheduleid = @id", db.GetConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            resetIncrement();
             db.openConnection();
 
             if ((command.ExecuteNonQuery() == 1))
@@ -124,6 +124,22 @@ namespace TungMovie
             DataTable dt = new DataTable();
             sda.Fill(dt);
             return dt;
+        }
+
+        public bool resetIncrement()
+        {
+            SqlCommand command = new SqlCommand("DECLARE @number INT; select @number = max(scheduleid) from Schedule; DBCC CHECKIDENT ('Schedule', RESEED, @number)", db.GetConnection);
+            db.openConnection();
+            if ((command.ExecuteNonQuery() == 1))
+            {
+                db.closeConnection();
+                return true;
+            }
+            else
+            {
+                db.closeConnection();
+                return false;
+            }
         }
     }
 }
